@@ -30,6 +30,8 @@ x-claimguard-app: &claimguard-app
   env_file:
     - path: .env
       required: false
+  volumes:
+    - ./data:/app/data
   depends_on:
     postgres:
       condition: service_healthy

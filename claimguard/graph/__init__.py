@@ -2,6 +2,7 @@
 
 from claimguard.graph.claim_pipeline import PipelineAgents, PipelineNode, build_claim_pipeline
 from claimguard.graph.routing import RoutingThresholds, decide_route
+from claimguard.graph.runtime import invoke_claim_pipeline
 
 __all__ = [
     "PipelineAgents",
@@ -9,4 +10,5 @@ __all__ = [
     "RoutingThresholds",
     "build_claim_pipeline",
     "decide_route",
+    "invoke_claim_pipeline",
 ]
