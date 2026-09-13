@@ -140,6 +140,32 @@ with parallel specialists and deterministic routing.
 
 ### Deferred
 
-- Real intake / vision / fraud / policy / adjudicator implementations
+- Real vision / fraud / policy / adjudicator implementations
 - Persist verdict + trace from the Celery worker
+
+---
+
+## Phase 3 — Agents (in progress, 2026-09-12)
+
+**Goal:** one agent at a time. Schema → versioned prompt → function → mocked
+unit tests → standalone sample inspect. Do not start the next agent until
+this loop is green.
+
+### Intake — done
+
+- Input: `IntakeAgentInput` (from `ClaimState` or a claim folder)
+- LLM schema: `IntakeExtraction` (model cannot invent storage URIs)
+- Output: `ClaimIntake`
+- Prompt: `claimguard/llm/prompts/intake_v1.yaml` (`schema: IntakeExtraction`)
+- `generate_structured`: validate → feed ValidationError back → bounded retry
+  → exhaust sets `error` + `requires_human_review` (Instructor-style, vendor-neutral)
+- PDF: pypdf text-native; OCR protocol fallback (`OcrBackend`)
+- NER: `RegexEntityExtractor` default; `HuggingFaceNerExtractor` is a swap-in
+- Offline path: `HeuristicIntakeCompleter` so a sample claim runs without an API key
+- Tests: happy path, malformed-triggers-retry, exhaust-flags-review, sample FNOL parse
+- Standalone: `uv run python scripts/run_intake_sample.py`
+
+### Next
+
+- Vision agent (do not start until intake verification is accepted)
 
