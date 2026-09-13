@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import operator
 from datetime import UTC, datetime
+from decimal import Decimal
 from typing import Annotated, Any, Literal, TypedDict
 
 from pydantic import Field
@@ -109,6 +110,25 @@ class AgentStep(ClaimGuardModel):
         ge=0,
         description="Wall-clock duration in milliseconds.",
     )
+    prompt_version: str | None = Field(
+        default=None,
+        description="Prompt file stem + version, e.g. 'intake_v1:1.0.0'.",
+    )
+    model: str | None = Field(
+        default=None,
+        description="Model id actually called, or 'heuristic-offline'.",
+    )
+    input_tokens: int = Field(default=0, ge=0)
+    output_tokens: int = Field(default=0, ge=0)
+    cost_usd: Decimal = Field(default=Decimal("0"), ge=0)
+    input_snapshot: dict[str, Any] = Field(
+        default_factory=dict,
+        description="Redacted node input. Never store raw claimant fields.",
+    )
+    output_snapshot: dict[str, Any] = Field(
+        default_factory=dict,
+        description="Redacted structured output written by this node.",
+    )
     output_schema: str | None = Field(
         default=None,
         description="Pydantic model name written by this step, e.g. 'FraudSignal'.",
@@ -131,6 +151,13 @@ class AgentStep(ClaimGuardModel):
         output_schema: str | None = None,
         error: str | None = None,
         latency_ms: int | None = None,
+        prompt_version: str | None = None,
+        model: str | None = None,
+        input_tokens: int = 0,
+        output_tokens: int = 0,
+        cost_usd: Decimal | None = None,
+        input_snapshot: dict[str, Any] | None = None,
+        output_snapshot: dict[str, Any] | None = None,
         metadata: dict[str, Any] | None = None,
     ) -> AgentStep:
         """Build a finished step with matching start/end timestamps."""
@@ -142,6 +169,13 @@ class AgentStep(ClaimGuardModel):
             started_at=ended,
             ended_at=ended,
             latency_ms=latency_ms,
+            prompt_version=prompt_version,
+            model=model,
+            input_tokens=input_tokens,
+            output_tokens=output_tokens,
+            cost_usd=cost_usd or Decimal("0"),
+            input_snapshot=input_snapshot or {},
+            output_snapshot=output_snapshot or {},
             output_schema=output_schema,
             error=error,
             metadata=metadata or {},
