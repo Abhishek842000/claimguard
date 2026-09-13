@@ -227,7 +227,76 @@ curl -sS -X POST http://127.0.0.1:8000/v1/claims \
 ### Deferred
 
 - HF vision + cross-encoder rerank
-- Frontend submit / trace viewer (API is enough to demo)
-- Docker image rebuild so Compose api/worker pick up this code
+- Docker image rebuild so Compose api/worker pick up Phase 4+ code
   (`./data` is now mounted)
+- Frontend was still a scaffold (done in Phase 5)
+
+---
+
+## Phase 5 — Dashboard, PII enforcement, cost, API auth (2026-09-12)
+
+**Goal:** submit a claim in the UI, watch it process, and read a visual
+agent trace — with PII actually stripped from logs/Langfuse, cost rolled
+up for interview talking points, and a production-shaped API gate.
+
+### Done
+
+- Next.js dashboard on **3001**:
+  - submit a sample folder **or** upload docs/images + notes
+  - claims list with status
+  - detail page: verdict + timeline (agent → key output → confidence/latency/cost)
+  - cost panel: running total, avg/claim, breakdown by agent
+  - BFF at `/api/claimguard/*` attaches `X-API-Key` (key stays server-side)
+- `pii_redaction.py` now also masks DOB-like dates and is a required
+  structlog + stdlib logging filter. Langfuse `flush()` redacts the batch
+  again before HTTP. Unit test asserts SSN / DOB never appear in rendered
+  log output
+- `cost_tracker.py` `summarize()` + `GET /v1/metrics` (Postgres
+  `agent_traces` is the source of truth — API and worker do not share
+  memory)
+- API key (`X-API-Key` / Bearer) + in-process sliding-window rate limit
+  on `/v1`. `/health` and `/docs` stay open
+- `GET /v1/claims`, `GET /v1/claims/samples`, `POST /v1/claims/upload`
+- Re-submitting the same sample folder mints new claim + document ids
+
+### Choices + tradeoffs
+
+- Auth is a shared-secret stub, not OAuth/JWT — enough to show the API
+  is not anonymously writable; swap for an IdP later
+- Rate limiter is in-memory per API process (Compose runs one replica)
+- Cost numbers come from persisted traces, not a process-global ledger
+- Reranker remains identity/RRF; vision remains filename heuristic
+- Frontend is not a Compose service (Langfuse occupies 3000)
+
+### Tested
+
+- `uv run pytest` — **70 passed**
+  - PII: SSN/DOB never in structlog or stdlib log output; Langfuse
+    payload redacted
+  - Cost aggregation (total / avg / by agent)
+  - API key 401, rate-limit 429, list/upload/samples
+  - Identity reranker keeps RRF order
+  - Existing agent + retrieval tests still green (mocked LLM)
+- Live: submitted Phoenix hail (`PA-2026-000039`) from the UI →
+  `needs_review`, fraud 0.59, confidence 0.62, 6-step visual timeline
+  (intake / fraud weather-mismatch / policy covered / vision dent /
+  adjudicator / human review). Cost panel showed $0.001183 total
+
+### How to demo
+
+```bash
+docker compose stop api worker   # if stale images own :8000
+uv run uvicorn apps.api.main:app --host 127.0.0.1 --port 8000
+uv run celery -A apps.worker.celery_app:celery_app worker -Q claims -l info
+cd apps/frontend && npm install && npm run dev
+# open http://localhost:3001
+```
+
+### Deferred
+
+- HF vision + cross-encoder rerank
+- Published eval numbers
+- 90s mp4 in `docs/demo/` — record with QuickTime when publishing
+- Compose service for the Next.js app
+- JWT / per-user keys
 

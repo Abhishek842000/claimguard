@@ -31,6 +31,10 @@ eval_runs/*.md
 data/indexes/*.pkl
 !data/indexes/.gitkeep
 
+# Uploaded claim folders (generated at submit time)
+data/uploads/*
+!data/uploads/.gitkeep
+
 # Hugging Face / FastEmbed caches
 .cache/
 

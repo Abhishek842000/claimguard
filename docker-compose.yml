@@ -20,6 +20,8 @@ x-claimguard-env: &claimguard-env
   LANGFUSE_HOST: http://langfuse-web:3000
   LANGFUSE_PUBLIC_KEY: ${LANGFUSE_PUBLIC_KEY:-pk-lf-claimguard-local}
   LANGFUSE_SECRET_KEY: ${LANGFUSE_SECRET_KEY:-sk-lf-claimguard-local}
+  CLAIMGUARD_API_KEY: ${CLAIMGUARD_API_KEY:-claimguard-local}
+  RATE_LIMIT_PER_MINUTE: ${RATE_LIMIT_PER_MINUTE:-120}
 
 x-claimguard-app: &claimguard-app
   build:

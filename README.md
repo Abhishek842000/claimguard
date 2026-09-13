@@ -68,7 +68,28 @@ uv run alembic upgrade head
 uv run python scripts/ingest_corpora.py
 uv run python scripts/query_corpora.py --corpus policy \
   --query "Is hail covered under other than collision?"
+
+# Dashboard (port 3001; Langfuse keeps 3000)
+# If the API/worker are not in Compose, run them locally:
+#   uv run uvicorn apps.api.main:app --host 127.0.0.1 --port 8000
+#   uv run celery -A apps.worker.celery_app:celery_app worker -Q claims -l info
+cd apps/frontend && npm install && npm run dev
 ```
+
+`/v1` routes require header `X-API-Key` (default `claimguard-local`). The Next.js
+app proxies through `/api/claimguard/*` so the key is not in client JS.
+
+### Demo
+
+1. Open http://localhost:3001
+2. Pick `PA-2026-000039 · hail` (or upload a PDF / photo + notes)
+3. Watch status move to `needs_review` or `auto_resolved`
+4. Open the claim: verdict + a step-by-step agent timeline (not a JSON dump)
+5. Cost panel on the home page shows running total, avg/claim, and by-agent spend
+
+A 90-second walkthrough is the live path above. Record it locally with
+QuickTime (`File → New Screen Recording`) and drop the file at
+`docs/demo/claimguard-demo.mp4` when you publish the repo.
 
 | Service          | URL                          | Notes                                      |
 |------------------|------------------------------|--------------------------------------------|
@@ -77,7 +98,8 @@ uv run python scripts/query_corpora.py --corpus policy \
 | ClaimGuard Postgres | localhost:5434            | Host 5434 → container 5432 (avoids local Postgres) |
 | Redis            | localhost:6379               | Celery uses logical DB 1                   |
 | Langfuse         | http://localhost:3000        | `dev@claimguard.local` / `claimguarddev`   |
-| Frontend (later) | http://localhost:3001        | Next.js; not in Compose yet                |
+| Dashboard        | http://localhost:3001        | Submit, claims list, visual agent timeline |
+| Metrics          | http://localhost:8000/v1/metrics | Requires `X-API-Key`                    |
 
 Langfuse is adapted from their [official Compose file](https://github.com/langfuse/langfuse/blob/main/docker-compose.yml).
 ClaimGuard owns the pgvector Postgres instance; Langfuse gets its own

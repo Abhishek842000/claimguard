@@ -2,7 +2,7 @@
 
 from functools import lru_cache
 
-from pydantic import Field, SecretStr
+from pydantic import AliasChoices, Field, SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -14,6 +14,7 @@ class Settings(BaseSettings):
         env_file_encoding="utf-8",
         extra="ignore",
         case_sensitive=False,
+        populate_by_name=True,
     )
 
     app_env: str = Field(default="local", description="local | test | staging | prod")
@@ -52,6 +53,19 @@ class Settings(BaseSettings):
     langfuse_host: str = Field(default="http://localhost:3000")
     langfuse_public_key: str = Field(default="pk-lf-claimguard-local")
     langfuse_secret_key: SecretStr = Field(default=SecretStr("sk-lf-claimguard-local"))
+
+    # Shared-secret stub, not OAuth. Signals "this API is not a wide-open LAN
+    # toy" without adding a full IdP. Rotate via CLAIMGUARD_API_KEY in .env.
+    api_key: SecretStr = Field(
+        default=SecretStr("claimguard-local"),
+        validation_alias=AliasChoices("claimguard_api_key", "api_key"),
+        description="Shared secret for /v1. Send as header X-API-Key.",
+    )
+    rate_limit_per_minute: int = Field(
+        default=120,
+        ge=0,
+        description="Sliding-window cap per API key. 0 disables the limiter.",
+    )
 
     routing_confidence_threshold: float = Field(
         default=0.65,
