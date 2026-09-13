@@ -119,3 +119,27 @@ uv run python scripts/query_corpora.py --corpus policy \
   --query "Is hail covered under other than collision?"
 ```
 
+---
+
+## Phase 2 — LangGraph backbone (in progress, 2026-09-12)
+
+**Goal:** `ClaimState` as the typed graph contract, plus a compiled StateGraph
+with parallel specialists and deterministic routing.
+
+### Done
+
+- `ClaimState` TypedDict: `claim_id`, raw docs/images, intake / damage /
+  fraud / policy / verdict, `trace`, `requires_human_review`, `error`
+- `DocumentRef`, `ImageRef`, `AgentStep` as the pre-intake / trace types
+- `StateGraph`: `intake_agent` → parallel (`vision_agent`, `fraud_agent`,
+  `policy_agent`) → `adjudicator_agent` → `route_to_human` | `auto_resolve`
+- Hard gates: human review if `confidence < 0.65` OR `fraud_score > 0.45`
+  (fail closed on missing verdict or `error`)
+- `trace` uses `operator.add` so parallel nodes cannot clobber each other
+- Agents still raise `NotImplementedError`; tests inject stub node bodies
+
+### Deferred
+
+- Real intake / vision / fraud / policy / adjudicator implementations
+- Persist verdict + trace from the Celery worker
+
