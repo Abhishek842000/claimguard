@@ -26,6 +26,7 @@ def run_vision_agent(
 ) -> ClaimStateUpdate:
     backend = classifier or HeuristicDamageClassifier()
     images = _images(state)
+    context = _claim_context(state)
     findings: list[PhotoFinding] = []
     for image in images:
         findings.append(
@@ -33,6 +34,7 @@ def run_vision_agent(
                 resolve_storage_uri(image.storage_uri),
                 image_id=_as_uuid(image.image_id),
                 caption=image.caption,
+                context=context,
             )
         )
     if not findings:
@@ -81,6 +83,22 @@ def _ok(assessment: DamageAssessment, backend: DamageClassifier) -> ClaimStateUp
             )
         ],
     }
+
+
+def _claim_context(state: ClaimState) -> str:
+    """Filename-only heuristics fail on `demo_img.webp`; notes still name the peril."""
+    intake = state.get("intake")
+    if intake is None:
+        return ""
+    return " ".join(
+        part
+        for part in (
+            intake.adjuster_notes,
+            intake.incident.description,
+            str(intake.incident.incident_type),
+        )
+        if part
+    )
 
 
 def _images(state: ClaimState) -> list[ImageRef]:
