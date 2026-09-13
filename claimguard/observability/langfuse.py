@@ -64,7 +64,7 @@ class LangfuseSink:
                 **{key: value for key, value in step.metadata.items() if key != "claimant"},
             },
             "level": "ERROR" if step.status == "error" else "DEFAULT",
-            "statusMessage": step.error,
+            "statusMessage": redact_mapping(step.error) if step.error else None,
         }
         self.events.append(
             {"id": uuid4().hex, "timestamp": now, "type": "span-create", "body": body}
@@ -105,6 +105,8 @@ class LangfuseSink:
         public = self.settings.langfuse_public_key
         secret = self.settings.langfuse_secret_key.get_secret_value()
         token = base64.b64encode(f"{public}:{secret}".encode()).decode()
+        # Belt-and-suspenders: never ship a batch that skipped add_span redaction.
+        payload = {"batch": redact_mapping(self.events)}
         try:
             response = httpx.post(
                 f"{host}/api/public/ingestion",
@@ -112,7 +114,7 @@ class LangfuseSink:
                     "Authorization": f"Basic {token}",
                     "Content-Type": "application/json",
                 },
-                json={"batch": self.events},
+                json=payload,
                 timeout=8.0,
             )
             if response.status_code >= 400:
