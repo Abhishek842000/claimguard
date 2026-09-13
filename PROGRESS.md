@@ -295,8 +295,73 @@ cd apps/frontend && npm install && npm run dev
 ### Deferred
 
 - HF vision + cross-encoder rerank
-- Published eval numbers
 - 90s mp4 in `docs/demo/` — record with QuickTime when publishing
 - Compose service for the Next.js app
 - JWT / per-user keys
+
+---
+
+## Phase 6 — Deploy docs, README, eval numbers (2026-09-12)
+
+**Goal:** a stranger can clone, follow the README, get a local eval in under
+15 minutes, and see real harness numbers behind every claim. Deploy path is
+documented exactly (Fly primary, Railway alternative).
+
+### Done
+
+- Eval harness is real (`claimguard-eval`): 18-case v0 holdout, amount
+  baseline vs ClaimGuard, planted-clause groundedness baseline, deterministic
+  `judge_v1`. Artifact checked in: `eval_runs/v0.json` / `eval_runs/v0.md`
+- Fraud book-of-business rules: shared phone/email, duplicate VIN, EXIF
+  offset (skip if incident year `< 2000`). **Bugfix:** `intake.claim_id` is a
+  `UUID`; the index stores strings — self was counted as a peer and every
+  claim looked "shared". Subtract `str(intake.claim_id)`
+- `Settings` rewrites Fly/Railway `postgres://` → `postgresql+psycopg://`
+- `fly.toml`: one image, `api` + `worker` process groups, `alembic upgrade`
+  as `release_command`. Dockerfile copies `data/` + `scripts/` for ingest
+- `docs/DEPLOY.md`: Fly MPG + `--pgvector`, Upstash Redis, Langfuse Cloud
+  Hobby (self-host ClickHouse/MinIO called out as too heavy), Railway steps
+- README: Mermaid architecture + LangGraph flow, 15-min `uv` path, eval
+  before/after table, stack rationale, "What I'd do with more time"
+- `RESUME_BULLETS.md` uses the harness numbers, not placeholders
+- Regression: `tests/eval/test_published_v0.py` fails if README/resume drift
+  from `eval_runs/v0.json`
+
+### Holdout numbers (v0, 18 cases, 4 fraud / 14 legit)
+
+| Metric | Baseline | ClaimGuard |
+|--------|----------|------------|
+| Fraud precision | 0.3333 (2 TP / 4 FP) | **1.0 (2 TP / 0 FP / 2 FN / 14 TN)** |
+| Fraud recall | 0.5 | **0.5** |
+| Groundedness | 0.0 | **1.0** |
+| Hallucination | 1.0 | **0.0** |
+| Latency p50 / p95 | 13.7 / 17.0 ms | same (offline heuristics) |
+| Cost / claim | $0.001347 | same |
+
+FN: mileage-inconsistency fire (`a6ca84e9-…`, score 0.12, no mileage rule);
+duplicate-VIN collision (`c6ef8f61-…`, score 0.34, only `FR-MISSING-POLICE-REPORT`).
+Do not claim recall improved.
+
+### Choices + tradeoffs
+
+- Eval retriever is in-memory keyword overlap over `data/policy_docs` +
+  `data/fraud_corpus` markdown so `claimguard-eval` needs no Docker/pgvector
+- Judge is deterministic (citation ⊆ retrieved), not a live LLM-as-judge
+- Deploy default is Langfuse Cloud Hobby, not self-host, for machine count
+- Managed Redis is one DB (vs Compose DB 0/1). Celery key prefixes isolate
+- Reranker remains identity/RRF; vision remains filename heuristic
+
+### Tested
+
+- `uv run pytest` — **80+** (entity UUID subtraction, metrics, config URL
+  rewrite, published-artifact lock)
+- `uv run claimguard-eval --dataset v0 --out eval_runs` — table above
+- Did **not** `fly deploy` from this machine (docs are the deliverable)
+
+### Deferred
+
+- Actual Fly/Railway machines (needs the user's Fly org + secrets)
+- Checked-in `docs/demo/claimguard-demo.mp4`
+- Mileage rule + tighter VIN graph (would target the 2 FN)
+- Human-review → eval-set feedback loop
 

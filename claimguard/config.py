@@ -2,7 +2,7 @@
 
 from functools import lru_cache
 
-from pydantic import AliasChoices, Field, SecretStr
+from pydantic import AliasChoices, Field, SecretStr, field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -79,6 +79,17 @@ class Settings(BaseSettings):
         le=1.0,
         description="Route to a human when fraud_risk_score is above this value.",
     )
+
+    @field_validator("database_url", mode="before")
+    @classmethod
+    def _psycopg_driver(cls, value: object) -> object:
+        """Fly / Railway attach `postgres://`; SQLAlchemy needs the psycopg driver."""
+        if not isinstance(value, str):
+            return value
+        for prefix in ("postgres://", "postgresql://"):
+            if value.startswith(prefix) and "+psycopg" not in value:
+                return "postgresql+psycopg://" + value[len(prefix) :]
+        return value
 
     @property
     def is_test(self) -> bool:

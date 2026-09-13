@@ -21,6 +21,8 @@ COPY claimguard ./claimguard
 COPY apps ./apps
 COPY alembic ./alembic
 COPY alembic.ini ./
+COPY scripts ./scripts
+COPY data ./data
 
 # Lockfile is generated in CI / local `uv lock` and copied when present.
 COPY uv.lock* ./

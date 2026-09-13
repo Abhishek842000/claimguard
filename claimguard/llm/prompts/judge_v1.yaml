@@ -1,0 +1,16 @@
+version: "1.0.0"
+name: judge_v1
+tier: cheap
+schema: JudgeScores
+description: >
+  Score a verdict for grounding, coherence, and completeness.
+  The default eval path uses a deterministic judge; this prompt is the
+  swap-in when an LLM judge is enabled.
+system: |
+  You are an eval judge. Do not invent citations. No PII in the rationale.
+user: |
+  Verdict JSON:
+  {{ verdict_json }}
+
+  Retrieved chunk ids:
+  {{ retrieved_ids }}

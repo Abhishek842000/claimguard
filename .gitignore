@@ -22,10 +22,12 @@ apps/frontend/node_modules/
 apps/frontend/.next/
 apps/frontend/out/
 
-# Eval artifacts (generated per run)
+# Eval artifacts (generated per run). Published v0 holdout is checked in.
 eval_runs/*.json
 eval_runs/*.md
 !eval_runs/.gitkeep
+!eval_runs/v0.json
+!eval_runs/v0.md
 
 # Rebuildable retrieval artifacts
 data/indexes/*.pkl

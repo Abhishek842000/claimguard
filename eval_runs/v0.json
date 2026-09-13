@@ -1,0 +1,384 @@
+{
+  "dataset_version": "v0",
+  "n_cases": 18,
+  "before": {
+    "fraud_precision": 0.3333,
+    "fraud_recall": 0.5,
+    "groundedness": 0.0,
+    "hallucination_rate": 1.0,
+    "latency_p50_ms": 13.7,
+    "latency_p95_ms": 17.0,
+    "cost_per_claim_usd": "0.001347",
+    "n_cases": 18,
+    "fraud_tp": 2,
+    "fraud_fp": 4,
+    "fraud_fn": 2,
+    "fraud_tn": 10
+  },
+  "after": {
+    "fraud_precision": 1.0,
+    "fraud_recall": 0.5,
+    "groundedness": 1.0,
+    "hallucination_rate": 0.0,
+    "latency_p50_ms": 13.7,
+    "latency_p95_ms": 17.0,
+    "cost_per_claim_usd": "0.001347",
+    "n_cases": 18,
+    "fraud_tp": 2,
+    "fraud_fp": 0,
+    "fraud_fn": 2,
+    "fraud_tn": 14
+  },
+  "cases": [
+    {
+      "claim_id": "235c4e8d-334d-59c1-aa32-d423b02f2fdc",
+      "y_true_fraud": true,
+      "y_pred_fraud": true,
+      "baseline_pred_fraud": true,
+      "fraud_risk_score": 0.59,
+      "rule_hits": [
+        "FR-SHARED-PHONE"
+      ],
+      "grounded": true,
+      "planted_hallucination_caught": true,
+      "judge": {
+        "grounding": 1.0,
+        "coherence": 1.0,
+        "completeness": 1.0,
+        "rationale": "Cited 3 clause(s); 3 were retrieved. Verdict present=True; routing gates match=True.",
+        "prompt_version": "judge_v1:1.0.0"
+      },
+      "latency_ms": 29.4,
+      "cost_usd": "0.00139095"
+    },
+    {
+      "claim_id": "a6ca84e9-a964-542b-8e9c-23a27cd6a241",
+      "y_true_fraud": true,
+      "y_pred_fraud": false,
+      "baseline_pred_fraud": true,
+      "fraud_risk_score": 0.12,
+      "rule_hits": [],
+      "grounded": true,
+      "planted_hallucination_caught": true,
+      "judge": {
+        "grounding": 1.0,
+        "coherence": 1.0,
+        "completeness": 1.0,
+        "rationale": "Cited 3 clause(s); 3 were retrieved. Verdict present=True; routing gates match=True.",
+        "prompt_version": "judge_v1:1.0.0"
+      },
+      "latency_ms": 14.8,
+      "cost_usd": "0.00134235"
+    },
+    {
+      "claim_id": "c6ef8f61-052b-59b4-95a4-1a9e40ecca53",
+      "y_true_fraud": true,
+      "y_pred_fraud": false,
+      "baseline_pred_fraud": false,
+      "fraud_risk_score": 0.34,
+      "rule_hits": [
+        "FR-MISSING-POLICE-REPORT"
+      ],
+      "grounded": true,
+      "planted_hallucination_caught": true,
+      "judge": {
+        "grounding": 1.0,
+        "coherence": 1.0,
+        "completeness": 1.0,
+        "rationale": "Cited 3 clause(s); 3 were retrieved. Verdict present=True; routing gates match=True.",
+        "prompt_version": "judge_v1:1.0.0"
+      },
+      "latency_ms": 14.8,
+      "cost_usd": "0.00142695"
+    },
+    {
+      "claim_id": "1c7b9fbb-cc1e-578f-8c2c-8c103616270b",
+      "y_true_fraud": true,
+      "y_pred_fraud": true,
+      "baseline_pred_fraud": false,
+      "fraud_risk_score": 0.59,
+      "rule_hits": [
+        "FR-PHOTO-EXIF"
+      ],
+      "grounded": true,
+      "planted_hallucination_caught": true,
+      "judge": {
+        "grounding": 1.0,
+        "coherence": 1.0,
+        "completeness": 1.0,
+        "rationale": "Cited 3 clause(s); 3 were retrieved. Verdict present=True; routing gates match=True.",
+        "prompt_version": "judge_v1:1.0.0"
+      },
+      "latency_ms": 14.3,
+      "cost_usd": "0.00134235"
+    },
+    {
+      "claim_id": "9fea24a4-2f51-5484-96aa-5c7a53884aca",
+      "y_true_fraud": false,
+      "y_pred_fraud": false,
+      "baseline_pred_fraud": true,
+      "fraud_risk_score": 0.12,
+      "rule_hits": [],
+      "grounded": true,
+      "planted_hallucination_caught": true,
+      "judge": {
+        "grounding": 1.0,
+        "coherence": 1.0,
+        "completeness": 1.0,
+        "rationale": "Cited 3 clause(s); 3 were retrieved. Verdict present=True; routing gates match=True.",
+        "prompt_version": "judge_v1:1.0.0"
+      },
+      "latency_ms": 13.5,
+      "cost_usd": "0.00133995"
+    },
+    {
+      "claim_id": "fbd34c1c-fb13-5a92-898a-70182bc18ef5",
+      "y_true_fraud": false,
+      "y_pred_fraud": false,
+      "baseline_pred_fraud": true,
+      "fraud_risk_score": 0.12,
+      "rule_hits": [],
+      "grounded": true,
+      "planted_hallucination_caught": true,
+      "judge": {
+        "grounding": 1.0,
+        "coherence": 1.0,
+        "completeness": 1.0,
+        "rationale": "Cited 3 clause(s); 3 were retrieved. Verdict present=True; routing gates match=True.",
+        "prompt_version": "judge_v1:1.0.0"
+      },
+      "latency_ms": 12.7,
+      "cost_usd": "0.00134595"
+    },
+    {
+      "claim_id": "7a48d422-c4e4-5ed0-95cc-05feaa73eef8",
+      "y_true_fraud": false,
+      "y_pred_fraud": false,
+      "baseline_pred_fraud": true,
+      "fraud_risk_score": 0.12,
+      "rule_hits": [],
+      "grounded": true,
+      "planted_hallucination_caught": true,
+      "judge": {
+        "grounding": 1.0,
+        "coherence": 1.0,
+        "completeness": 1.0,
+        "rationale": "Cited 3 clause(s); 3 were retrieved. Verdict present=True; routing gates match=True.",
+        "prompt_version": "judge_v1:1.0.0"
+      },
+      "latency_ms": 13.5,
+      "cost_usd": "0.00133995"
+    },
+    {
+      "claim_id": "85a56089-cf2b-5d02-8043-cb2fc50ccb42",
+      "y_true_fraud": false,
+      "y_pred_fraud": false,
+      "baseline_pred_fraud": true,
+      "fraud_risk_score": 0.12,
+      "rule_hits": [],
+      "grounded": true,
+      "planted_hallucination_caught": true,
+      "judge": {
+        "grounding": 1.0,
+        "coherence": 1.0,
+        "completeness": 1.0,
+        "rationale": "Cited 3 clause(s); 3 were retrieved. Verdict present=True; routing gates match=True.",
+        "prompt_version": "judge_v1:1.0.0"
+      },
+      "latency_ms": 13.5,
+      "cost_usd": "0.00133995"
+    },
+    {
+      "claim_id": "ea5ee151-b376-5dce-810b-eb2baa2cad1a",
+      "y_true_fraud": false,
+      "y_pred_fraud": false,
+      "baseline_pred_fraud": false,
+      "fraud_risk_score": 0.12,
+      "rule_hits": [],
+      "grounded": true,
+      "planted_hallucination_caught": true,
+      "judge": {
+        "grounding": 1.0,
+        "coherence": 1.0,
+        "completeness": 1.0,
+        "rationale": "Cited 3 clause(s); 3 were retrieved. Verdict present=True; routing gates match=True.",
+        "prompt_version": "judge_v1:1.0.0"
+      },
+      "latency_ms": 13.8,
+      "cost_usd": "0.00135735"
+    },
+    {
+      "claim_id": "94ca5362-4036-5a67-b450-c4be4528ef02",
+      "y_true_fraud": false,
+      "y_pred_fraud": false,
+      "baseline_pred_fraud": false,
+      "fraud_risk_score": 0.12,
+      "rule_hits": [],
+      "grounded": true,
+      "planted_hallucination_caught": true,
+      "judge": {
+        "grounding": 1.0,
+        "coherence": 1.0,
+        "completeness": 1.0,
+        "rationale": "Cited 3 clause(s); 3 were retrieved. Verdict present=True; routing gates match=True.",
+        "prompt_version": "judge_v1:1.0.0"
+      },
+      "latency_ms": 14.4,
+      "cost_usd": "0.00135675"
+    },
+    {
+      "claim_id": "264c9c73-b9df-5fb0-96f0-712793af5fe9",
+      "y_true_fraud": false,
+      "y_pred_fraud": false,
+      "baseline_pred_fraud": false,
+      "fraud_risk_score": 0.12,
+      "rule_hits": [],
+      "grounded": true,
+      "planted_hallucination_caught": true,
+      "judge": {
+        "grounding": 1.0,
+        "coherence": 1.0,
+        "completeness": 1.0,
+        "rationale": "Cited 3 clause(s); 3 were retrieved. Verdict present=True; routing gates match=True.",
+        "prompt_version": "judge_v1:1.0.0"
+      },
+      "latency_ms": 13.7,
+      "cost_usd": "0.00133155"
+    },
+    {
+      "claim_id": "e535472c-906d-5c75-8396-516fd80e3fcc",
+      "y_true_fraud": false,
+      "y_pred_fraud": false,
+      "baseline_pred_fraud": false,
+      "fraud_risk_score": 0.12,
+      "rule_hits": [],
+      "grounded": true,
+      "planted_hallucination_caught": true,
+      "judge": {
+        "grounding": 1.0,
+        "coherence": 1.0,
+        "completeness": 1.0,
+        "rationale": "Cited 3 clause(s); 3 were retrieved. Verdict present=True; routing gates match=True.",
+        "prompt_version": "judge_v1:1.0.0"
+      },
+      "latency_ms": 13.8,
+      "cost_usd": "0.00129675"
+    },
+    {
+      "claim_id": "f7b55472-d5aa-54a3-971e-4a38bed4c5eb",
+      "y_true_fraud": false,
+      "y_pred_fraud": false,
+      "baseline_pred_fraud": false,
+      "fraud_risk_score": 0.12,
+      "rule_hits": [],
+      "grounded": true,
+      "planted_hallucination_caught": true,
+      "judge": {
+        "grounding": 1.0,
+        "coherence": 1.0,
+        "completeness": 1.0,
+        "rationale": "Cited 3 clause(s); 3 were retrieved. Verdict present=True; routing gates match=True.",
+        "prompt_version": "judge_v1:1.0.0"
+      },
+      "latency_ms": 13.3,
+      "cost_usd": "0.00133095"
+    },
+    {
+      "claim_id": "23eb0cbc-25a6-52d6-bc52-25eae9d0c37a",
+      "y_true_fraud": false,
+      "y_pred_fraud": false,
+      "baseline_pred_fraud": false,
+      "fraud_risk_score": 0.12,
+      "rule_hits": [],
+      "grounded": true,
+      "planted_hallucination_caught": true,
+      "judge": {
+        "grounding": 1.0,
+        "coherence": 1.0,
+        "completeness": 1.0,
+        "rationale": "Cited 3 clause(s); 3 were retrieved. Verdict present=True; routing gates match=True.",
+        "prompt_version": "judge_v1:1.0.0"
+      },
+      "latency_ms": 13.2,
+      "cost_usd": "0.00132855"
+    },
+    {
+      "claim_id": "625c81d2-47d0-5f76-9622-52afef0e26dd",
+      "y_true_fraud": false,
+      "y_pred_fraud": false,
+      "baseline_pred_fraud": false,
+      "fraud_risk_score": 0.12,
+      "rule_hits": [],
+      "grounded": true,
+      "planted_hallucination_caught": true,
+      "judge": {
+        "grounding": 1.0,
+        "coherence": 1.0,
+        "completeness": 1.0,
+        "rationale": "Cited 3 clause(s); 3 were retrieved. Verdict present=True; routing gates match=True.",
+        "prompt_version": "judge_v1:1.0.0"
+      },
+      "latency_ms": 14.1,
+      "cost_usd": "0.00137775"
+    },
+    {
+      "claim_id": "1a708b4a-c4dd-5549-ac49-22aa1d3303c2",
+      "y_true_fraud": false,
+      "y_pred_fraud": false,
+      "baseline_pred_fraud": false,
+      "fraud_risk_score": 0.12,
+      "rule_hits": [],
+      "grounded": true,
+      "planted_hallucination_caught": true,
+      "judge": {
+        "grounding": 1.0,
+        "coherence": 1.0,
+        "completeness": 1.0,
+        "rationale": "Cited 3 clause(s); 3 were retrieved. Verdict present=True; routing gates match=True.",
+        "prompt_version": "judge_v1:1.0.0"
+      },
+      "latency_ms": 13.5,
+      "cost_usd": "0.00131055"
+    },
+    {
+      "claim_id": "b27da3be-7230-5119-8d77-d50afc91a5d8",
+      "y_true_fraud": false,
+      "y_pred_fraud": false,
+      "baseline_pred_fraud": false,
+      "fraud_risk_score": 0.34,
+      "rule_hits": [
+        "FR-MISSING-POLICE-REPORT"
+      ],
+      "grounded": true,
+      "planted_hallucination_caught": true,
+      "judge": {
+        "grounding": 1.0,
+        "coherence": 1.0,
+        "completeness": 1.0,
+        "rationale": "Cited 3 clause(s); 3 were retrieved. Verdict present=True; routing gates match=True.",
+        "prompt_version": "judge_v1:1.0.0"
+      },
+      "latency_ms": 13.3,
+      "cost_usd": "0.00135855"
+    },
+    {
+      "claim_id": "17bd2771-1229-524a-bfa7-b8d00010fb3d",
+      "y_true_fraud": false,
+      "y_pred_fraud": false,
+      "baseline_pred_fraud": false,
+      "fraud_risk_score": 0.12,
+      "rule_hits": [],
+      "grounded": true,
+      "planted_hallucination_caught": true,
+      "judge": {
+        "grounding": 1.0,
+        "coherence": 1.0,
+        "completeness": 1.0,
+        "rationale": "Cited 3 clause(s); 3 were retrieved. Verdict present=True; routing gates match=True.",
+        "prompt_version": "judge_v1:1.0.0"
+      },
+      "latency_ms": 13.8,
+      "cost_usd": "0.00133095"
+    }
+  ]
+}
