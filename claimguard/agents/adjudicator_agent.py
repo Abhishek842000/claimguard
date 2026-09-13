@@ -1,9 +1,9 @@
-"""Adjudicator — synthesize sub-agent outputs into a `TriageVerdict` and route."""
+"""Adjudicator — synthesize sub-agent outputs into a `TriageVerdict`."""
 
 from __future__ import annotations
 
-from claimguard.schemas.graph import GraphState
+from claimguard.schemas.graph import ClaimState, ClaimStateUpdate
 
 
-def run_adjudicator_agent(state: GraphState) -> GraphState:
-    raise NotImplementedError("adjudicator_agent is implemented in Phase 3")
+def run_adjudicator_agent(state: ClaimState) -> ClaimStateUpdate:
+    raise NotImplementedError("adjudicator_agent is implemented in a later phase")
