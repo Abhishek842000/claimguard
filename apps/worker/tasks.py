@@ -10,7 +10,7 @@ def process_claim(self, claim_id: str) -> dict[str, str]:
     """Run the LangGraph pipeline for one claim.
 
     Phase 0: acknowledge the enqueue so the worker process is exercisable.
-    Phase 1+: load artifacts, invoke `build_claim_pipeline()`, persist verdict + trace.
+    Next: load artifacts, invoke `build_claim_pipeline()`, persist verdict + trace.
     """
     UUID(claim_id)  # validate early; fail the task on garbage ids
     return {"claim_id": claim_id, "status": "not_implemented"}

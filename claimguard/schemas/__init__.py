@@ -23,7 +23,16 @@ from claimguard.schemas.fraud import (
     FraudSignal,
     SimilarFraudCase,
 )
-from claimguard.schemas.graph import GraphError, GraphState
+from claimguard.schemas.graph import (
+    AgentStep,
+    ClaimState,
+    ClaimStateUpdate,
+    DocumentRef,
+    GraphError,
+    GraphState,
+    ImageRef,
+    empty_claim_state,
+)
 from claimguard.schemas.intake import (
     ClaimantProfile,
     ClaimDocumentRef,
@@ -40,12 +49,15 @@ from claimguard.schemas.verdict import MissingDocument, SettlementMemo, TriageVe
 __all__ = [
     "AgentName",
     "AgentSpan",
+    "AgentStep",
     "AgentTrace",
     "CitedClause",
     "ClaimDocumentRef",
     "ClaimGuardModel",
     "ClaimImageRef",
     "ClaimIntake",
+    "ClaimState",
+    "ClaimStateUpdate",
     "ClaimStatus",
     "ClaimantProfile",
     "CoverageStatus",
@@ -53,6 +65,7 @@ __all__ = [
     "DamageAssessment",
     "DamageType",
     "DetectedObject",
+    "DocumentRef",
     "DocumentType",
     "EntityGraphMatch",
     "ExtractedEntity",
@@ -61,6 +74,7 @@ __all__ = [
     "GeoLocation",
     "GraphError",
     "GraphState",
+    "ImageRef",
     "IncidentDetails",
     "IncidentType",
     "MissingDocument",
@@ -75,4 +89,5 @@ __all__ = [
     "SimilarFraudCase",
     "TriageVerdict",
     "VehicleInfo",
+    "empty_claim_state",
 ]
