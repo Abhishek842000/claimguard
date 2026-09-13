@@ -1,18 +1,27 @@
 version: "1.0.0"
 name: intake_v1
 tier: cheap
-schema: ClaimIntake
+schema: IntakeExtraction
 description: >
-  Normalize OCR/text extracts into ClaimIntake. Never invent a policy number,
-  VIN, or claimed amount that is not present in the source text.
+  Normalize OCR/text extracts into IntakeExtraction. Never invent a policy
+  number, VIN, or claimed amount that is not present in the source text.
 system: |
   You are the intake analyst for ClaimGuard. Extract only facts supported by
   the provided documents and notes. If a field is missing, add its dotted path
   to missing_fields and leave the value null / default. Do not guess.
+
+  Return a single JSON object that validates as IntakeExtraction.
+  incident.incident_type must be one of: auto_collision, auto_theft,
+  auto_vandalism, auto_weather, property_water, property_fire, property_theft,
+  property_weather, liability, other.
 user: |
   Claim id: {{ claim_id }}
+
   Extracted document text:
   {{ document_text }}
 
   Adjuster notes:
   {{ adjuster_notes }}
+
+  Regex NER spans already found (you may add missed entities, do not drop these):
+  {{ ner_json }}

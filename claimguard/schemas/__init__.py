@@ -31,6 +31,7 @@ from claimguard.schemas.graph import (
     GraphError,
     GraphState,
     ImageRef,
+    IntakeAgentInput,
     empty_claim_state,
 )
 from claimguard.schemas.intake import (
@@ -40,6 +41,7 @@ from claimguard.schemas.intake import (
     ClaimIntake,
     ExtractedEntity,
     IncidentDetails,
+    IntakeExtraction,
     VehicleInfo,
 )
 from claimguard.schemas.policy import CitedClause, PolicyDetermination
@@ -77,6 +79,8 @@ __all__ = [
     "ImageRef",
     "IncidentDetails",
     "IncidentType",
+    "IntakeAgentInput",
+    "IntakeExtraction",
     "MissingDocument",
     "Money",
     "PhotoFinding",

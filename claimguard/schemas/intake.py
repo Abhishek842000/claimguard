@@ -147,6 +147,36 @@ class ClaimImageRef(ClaimGuardModel):
     )
 
 
+class IntakeExtraction(ClaimGuardModel):
+    """LLM-facing extract. The agent attaches claim_id, file refs, and parser versions.
+
+    This is the schema `generate_structured` validates — not ClaimIntake — so the
+    model cannot invent storage URIs or document ids.
+    """
+
+    policy_number: str | None = Field(
+        default=None,
+        description="Policy number as printed. Null if not present in the source text.",
+    )
+    claimant: ClaimantProfile = Field(description="Named insured / claimant. Entire object is PII.")
+    incident: IncidentDetails = Field(description="Normalized loss event.")
+    claimed_amount: Money | None = Field(
+        default=None,
+        description="Amount requested on the form. Null if not stated.",
+    )
+    extracted_entities: list[ExtractedEntity] = Field(
+        default_factory=list,
+        description="Entities the model spotted that the regex NER may have missed.",
+    )
+    missing_fields: list[str] = Field(
+        default_factory=list,
+        description="Dotted paths the source text did not support, e.g. 'incident.vehicle.vin'.",
+    )
+    intake_confidence: UnitInterval = Field(
+        description="How complete and internally consistent this extract is.",
+    )
+
+
 class ClaimIntake(ClaimGuardModel):
     """Canonical claim record after intake. This is the only unstructured-to-structured hop."""
 
