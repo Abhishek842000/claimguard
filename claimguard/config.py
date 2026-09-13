@@ -53,6 +53,19 @@ class Settings(BaseSettings):
     langfuse_public_key: str = Field(default="pk-lf-claimguard-local")
     langfuse_secret_key: SecretStr = Field(default=SecretStr("sk-lf-claimguard-local"))
 
+    routing_confidence_threshold: float = Field(
+        default=0.65,
+        ge=0.0,
+        le=1.0,
+        description="Route to a human when verdict.overall_confidence is below this value.",
+    )
+    routing_fraud_score_threshold: float = Field(
+        default=0.45,
+        ge=0.0,
+        le=1.0,
+        description="Route to a human when fraud_risk_score is above this value.",
+    )
+
     @property
     def is_test(self) -> bool:
         return self.app_env == "test"
