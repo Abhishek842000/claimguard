@@ -25,8 +25,8 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from claimguard.db.base import Base
 
-# Must match Settings.embedding_dim and the MiniLM encoder used at ingest time.
-EMBEDDING_DIM = 384
+# Must match Settings.embedding_dim and BAAI/bge-base-en-v1.5 (768-d).
+EMBEDDING_DIM = 768
 
 
 class Claim(Base):

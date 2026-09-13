@@ -16,7 +16,7 @@ x-claimguard-env: &claimguard-env
   REDIS_URL: redis://:${REDIS_AUTH:-claimguard-redis}@redis:6379/0
   CELERY_BROKER_URL: redis://:${REDIS_AUTH:-claimguard-redis}@redis:6379/1
   CELERY_RESULT_BACKEND: redis://:${REDIS_AUTH:-claimguard-redis}@redis:6379/1
-  EMBEDDING_DIM: ${EMBEDDING_DIM:-384}
+  EMBEDDING_DIM: ${EMBEDDING_DIM:-768}
   LANGFUSE_HOST: http://langfuse-web:3000
   LANGFUSE_PUBLIC_KEY: ${LANGFUSE_PUBLIC_KEY:-pk-lf-claimguard-local}
   LANGFUSE_SECRET_KEY: ${LANGFUSE_SECRET_KEY:-sk-lf-claimguard-local}
