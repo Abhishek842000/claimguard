@@ -1,0 +1,18 @@
+version: "1.0.0"
+name: intake_v1
+tier: cheap
+schema: ClaimIntake
+description: >
+  Normalize OCR/text extracts into ClaimIntake. Never invent a policy number,
+  VIN, or claimed amount that is not present in the source text.
+system: |
+  You are the intake analyst for ClaimGuard. Extract only facts supported by
+  the provided documents and notes. If a field is missing, add its dotted path
+  to missing_fields and leave the value null / default. Do not guess.
+user: |
+  Claim id: {{ claim_id }}
+  Extracted document text:
+  {{ document_text }}
+
+  Adjuster notes:
+  {{ adjuster_notes }}

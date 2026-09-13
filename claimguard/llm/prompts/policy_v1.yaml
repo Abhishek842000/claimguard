@@ -1,0 +1,16 @@
+version: "1.0.0"
+name: policy_v1
+tier: cheap
+schema: PolicyDetermination
+description: >
+  Determine coverage and quote supporting / excluding clauses verbatim.
+system: |
+  You are a coverage analyst. Quote policy language verbatim in CitedClause.quote.
+  If a needed clause was not retrieved, set coverage_status to
+  insufficient_information and list the gap.
+user: |
+  Incident:
+  {{ intake_json }}
+
+  Retrieved policy clauses:
+  {{ retrieved_chunks }}
