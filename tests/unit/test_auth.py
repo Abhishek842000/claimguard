@@ -39,9 +39,13 @@ def test_v1_accepts_configured_api_key(monkeypatch) -> None:
     assert response.status_code == 200
 
 
-def test_rate_limit_returns_429() -> None:
+def test_rate_limit_returns_429_on_writes_not_polls() -> None:
     client = _app(rate_limit_per_minute=2)
     headers = {"X-API-Key": "claimguard-local"}
-    assert client.get("/v1/claims/samples", headers=headers).status_code == 200
-    assert client.get("/v1/claims/samples", headers=headers).status_code == 200
-    assert client.get("/v1/claims/samples", headers=headers).status_code == 429
+    for _ in range(5):
+        assert client.get("/v1/claims/samples", headers=headers).status_code == 200
+    assert client.post("/v1/claims", headers=headers, json={}).status_code == 422
+    assert client.post("/v1/claims", headers=headers, json={}).status_code == 422
+    limited = client.post("/v1/claims", headers=headers, json={})
+    assert limited.status_code == 429
+    assert limited.headers.get("retry-after") == "60"
