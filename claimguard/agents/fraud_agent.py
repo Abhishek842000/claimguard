@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 
-from claimguard.schemas.graph import GraphState
+from claimguard.schemas.graph import ClaimState, ClaimStateUpdate
 
 
-def run_fraud_agent(state: GraphState) -> GraphState:
-    raise NotImplementedError("fraud_agent is implemented in Phase 3")
+def run_fraud_agent(state: ClaimState) -> ClaimStateUpdate:
+    raise NotImplementedError("fraud_agent is implemented in a later phase")
