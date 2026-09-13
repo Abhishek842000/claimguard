@@ -27,12 +27,12 @@ eval_runs/*.json
 eval_runs/*.md
 !eval_runs/.gitkeep
 
-# Generated synthetic blobs can be large; keep the directory, not the dumps
-data/synthetic_claims/**/*.pdf
-data/synthetic_claims/**/*.png
-data/synthetic_claims/**/*.jpg
-!data/**/.gitkeep
-!data/**/README.md
+# Rebuildable retrieval artifacts
+data/indexes/*.pkl
+!data/indexes/.gitkeep
+
+# Hugging Face / FastEmbed caches
+.cache/
 
 # OS / IDE
 .DS_Store
