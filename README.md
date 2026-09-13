@@ -42,8 +42,8 @@ auto-resolving.
             policy_chunks / fraud_case_chunks
 ```
 
-*Diagram is the target topology. Phase 0 ships the scaffolding, schemas,
-database, and `/health` path. Agents and retrieval are implemented in later phases.*
+*Diagram is the target topology. Phase 1 ships synthetic claims, policy/fraud
+corpora, and a queryable pgvector + BM25 index. Agents are implemented next.*
 
 ## Quickstart
 
@@ -61,6 +61,13 @@ uv run pytest
 # Full local stack: pgvector, Redis, Langfuse, API, worker
 docker compose up --build
 curl -s http://localhost:8000/health
+
+# Phase 1 data (synthetic claims + corpora)
+uv run python scripts/generate_synthetic_data.py
+uv run alembic upgrade head
+uv run python scripts/ingest_corpora.py
+uv run python scripts/query_corpora.py --corpus policy \
+  --query "Is hail covered under other than collision?"
 ```
 
 | Service          | URL                          | Notes                                      |

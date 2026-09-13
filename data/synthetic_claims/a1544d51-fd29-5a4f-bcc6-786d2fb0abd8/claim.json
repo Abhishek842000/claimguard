@@ -1,0 +1,69 @@
+{
+  "adjuster_notes": "Insured Skyler Cho reports a wind loss on 2026-03-15 in Atlanta. Notes from the first call said the loss was 2026-03-13 and that there was no third party; the FNOL form lists third_party_involved=False. One note says airbags did not deploy; another says they did. Need a recorded statement before we lean on the photos.",
+  "claim_id": "a1544d51-fd29-5a4f-bcc6-786d2fb0abd8",
+  "claimant": {
+    "date_of_birth": "1977-10-17",
+    "email": "skyler.cho.32@example.test",
+    "full_name": "Skyler Cho",
+    "phone": "348-555-7284"
+  },
+  "claimed_amount": {
+    "amount": "10705.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "image_captions": [
+    "wind photo 1 \u2014 Atlanta",
+    "wind photo 2 \u2014 Atlanta",
+    "wind photo 3 \u2014 Atlanta"
+  ],
+  "images": [
+    {
+      "caption": "wind photo 1 \u2014 Atlanta",
+      "exif_datetime": "2026-03-15T14:00:00",
+      "filename": "wind-1.jpg",
+      "relative_path": "images/wind-1.jpg"
+    },
+    {
+      "caption": "wind photo 2 \u2014 Atlanta",
+      "exif_datetime": "2026-03-15T14:00:00",
+      "filename": "wind-2.jpg",
+      "relative_path": "images/wind-2.jpg"
+    },
+    {
+      "caption": "wind photo 3 \u2014 Atlanta",
+      "exif_datetime": "2026-03-15T14:00:00",
+      "filename": "wind-3.jpg",
+      "relative_path": "images/wind-3.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Wind-thrown limb punctured the rear roof plane in Atlanta.",
+    "incident_date": "2026-03-15",
+    "incident_type": "property_weather",
+    "location": {
+      "city": "Atlanta",
+      "postal_code": "30303",
+      "state": "GA",
+      "street_address": "2336 Pine Ave"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-03-15",
+    "third_party_involved": false,
+    "vehicle": null
+  },
+  "injected_fraud_signals": [],
+  "line_of_business": "home",
+  "notes_style": "contradictory",
+  "peril": "wind",
+  "policy_form": "HO3-CG-01",
+  "policy_number": "HO-2026-000032",
+  "recipe_key": "home_wind",
+  "split": "dev"
+}

@@ -1,0 +1,69 @@
+{
+  "adjuster_notes": "FNOL mob. insd Riley. wind @ Seattle 11/8. amt asked 6778.00. no 3p. photos 3 recvd. f/u est.",
+  "claim_id": "3c3667ce-24ea-5c77-a9c2-1110377685b8",
+  "claimant": {
+    "date_of_birth": "1967-06-18",
+    "email": "riley.okafor.24@example.test",
+    "full_name": "Riley Okafor",
+    "phone": "814-555-2983"
+  },
+  "claimed_amount": {
+    "amount": "6778.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "image_captions": [
+    "wind photo 1 \u2014 Seattle",
+    "wind photo 2 \u2014 Seattle",
+    "wind photo 3 \u2014 Seattle"
+  ],
+  "images": [
+    {
+      "caption": "wind photo 1 \u2014 Seattle",
+      "exif_datetime": "2026-11-08T14:00:00",
+      "filename": "wind-1.jpg",
+      "relative_path": "images/wind-1.jpg"
+    },
+    {
+      "caption": "wind photo 2 \u2014 Seattle",
+      "exif_datetime": "2026-11-08T14:00:00",
+      "filename": "wind-2.jpg",
+      "relative_path": "images/wind-2.jpg"
+    },
+    {
+      "caption": "wind photo 3 \u2014 Seattle",
+      "exif_datetime": "2026-11-08T14:00:00",
+      "filename": "wind-3.jpg",
+      "relative_path": "images/wind-3.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Wind-thrown limb punctured the rear roof plane in Seattle.",
+    "incident_date": "2026-11-08",
+    "incident_type": "property_weather",
+    "location": {
+      "city": "Seattle",
+      "postal_code": "98101",
+      "state": "WA",
+      "street_address": "7118 Oak Ct"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-11-10",
+    "third_party_involved": false,
+    "vehicle": null
+  },
+  "injected_fraud_signals": [],
+  "line_of_business": "home",
+  "notes_style": "messy",
+  "peril": "wind",
+  "policy_form": "HO3-CG-01",
+  "policy_number": "HO-2026-000024",
+  "recipe_key": "home_wind",
+  "split": "dev"
+}

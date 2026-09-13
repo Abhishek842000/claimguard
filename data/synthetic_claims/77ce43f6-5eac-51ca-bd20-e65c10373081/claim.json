@@ -1,0 +1,71 @@
+{
+  "adjuster_notes": "Insured Finley Nguyen reports a collision loss on 2026-01-19 in Denver. Notes from the first call said the loss was 2026-01-17 and that there was no third party; the FNOL form lists third_party_involved=True. One note says airbags did not deploy; another says they did. Need a recorded statement before we lean on the photos.",
+  "claim_id": "77ce43f6-5eac-51ca-bd20-e65c10373081",
+  "claimant": {
+    "date_of_birth": "1982-08-08",
+    "email": "finley.nguyen.8@example.test",
+    "full_name": "Finley Nguyen",
+    "phone": "632-555-4006"
+  },
+  "claimed_amount": {
+    "amount": "3749.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "image_captions": [
+    "collision photo 1 \u2014 Denver",
+    "collision photo 2 \u2014 Denver"
+  ],
+  "images": [
+    {
+      "caption": "collision photo 1 \u2014 Denver",
+      "exif_datetime": "2026-01-19T16:00:00",
+      "filename": "collision-1.jpg",
+      "relative_path": "images/collision-1.jpg"
+    },
+    {
+      "caption": "collision photo 2 \u2014 Denver",
+      "exif_datetime": "2026-01-19T16:00:00",
+      "filename": "collision-2.jpg",
+      "relative_path": "images/collision-2.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Low-to-moderate speed impact in Denver. Another driver is identified. Visible bumper and lamp damage.",
+    "incident_date": "2026-01-19",
+    "incident_type": "auto_collision",
+    "location": {
+      "city": "Denver",
+      "postal_code": "80203",
+      "state": "CO",
+      "street_address": "1335 Lakeshore Dr"
+    },
+    "police_report_number": "CO-299448",
+    "reported_date": "2026-01-23",
+    "third_party_involved": true,
+    "vehicle": {
+      "license_plate": "7XKZ982",
+      "make": "Kia",
+      "model": "Sportage",
+      "odometer": 26322,
+      "prior_odometer": null,
+      "prior_odometer_date": null,
+      "vin": "PJ7S73NGG4Z436DGD",
+      "year": 2023
+    }
+  },
+  "injected_fraud_signals": [],
+  "line_of_business": "auto",
+  "notes_style": "contradictory",
+  "peril": "collision",
+  "policy_form": "PAP-CG-01",
+  "policy_number": "PA-2026-000008",
+  "recipe_key": "auto_collision",
+  "split": "dev"
+}

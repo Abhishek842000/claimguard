@@ -1,0 +1,62 @@
+{
+  "adjuster_notes": "Insured Riley Sullivan reports a fire loss on 2026-03-01 in Atlanta. Notes from the first call said the loss was 2026-03-01 and that there was no third party; the FNOL form lists third_party_involved=False. One note says airbags did not deploy; another says they did. Need a recorded statement before we lean on the photos.",
+  "claim_id": "560854c1-f88a-571f-bf15-e8cf9f1d47c6",
+  "claimant": {
+    "date_of_birth": "1975-06-12",
+    "email": "riley.sullivan.2@example.test",
+    "full_name": "Riley Sullivan",
+    "phone": "664-555-6977"
+  },
+  "claimed_amount": {
+    "amount": "18619.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "image_captions": [
+    "fire photo 1 \u2014 Atlanta",
+    "fire photo 2 \u2014 Atlanta"
+  ],
+  "images": [
+    {
+      "caption": "fire photo 1 \u2014 Atlanta",
+      "exif_datetime": "2026-03-01T14:00:00",
+      "filename": "fire-1.jpg",
+      "relative_path": "images/fire-1.jpg"
+    },
+    {
+      "caption": "fire photo 2 \u2014 Atlanta",
+      "exif_datetime": "2026-03-01T14:00:00",
+      "filename": "fire-2.jpg",
+      "relative_path": "images/fire-2.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Kitchen fire on the residence premises in Atlanta. Fire department extinguished. Smoke throughout first floor.",
+    "incident_date": "2026-03-01",
+    "incident_type": "property_fire",
+    "location": {
+      "city": "Atlanta",
+      "postal_code": "30303",
+      "state": "GA",
+      "street_address": "3532 Summit Blvd"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-04-05",
+    "third_party_involved": false,
+    "vehicle": null
+  },
+  "injected_fraud_signals": [],
+  "line_of_business": "home",
+  "notes_style": "contradictory",
+  "peril": "fire",
+  "policy_form": "HO3-CG-01",
+  "policy_number": "HO-2026-000002",
+  "recipe_key": "home_fire",
+  "split": "dev"
+}

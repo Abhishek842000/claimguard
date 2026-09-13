@@ -1,0 +1,1 @@
+Insured Finley Nguyen reports a collision loss on 2026-01-19 in Denver. Notes from the first call said the loss was 2026-01-17 and that there was no third party; the FNOL form lists third_party_involved=True. One note says airbags did not deploy; another says they did. Need a recorded statement before we lean on the photos.

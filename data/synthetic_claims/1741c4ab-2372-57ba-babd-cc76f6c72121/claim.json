@@ -1,0 +1,71 @@
+{
+  "adjuster_notes": "Insured Quinn Kowalski reports a theft loss on 2026-04-26 in Austin. Notes from the first call said the loss was 2026-04-24 and that there was no third party; the FNOL form lists third_party_involved=False. One note says airbags did not deploy; another says they did. Need a recorded statement before we lean on the photos.",
+  "claim_id": "1741c4ab-2372-57ba-babd-cc76f6c72121",
+  "claimant": {
+    "date_of_birth": "1975-06-12",
+    "email": "quinn.kowalski.50@example.test",
+    "full_name": "Quinn Kowalski",
+    "phone": "736-555-9564"
+  },
+  "claimed_amount": {
+    "amount": "8932.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "image_captions": [
+    "theft photo 1 \u2014 Austin",
+    "theft photo 2 \u2014 Austin"
+  ],
+  "images": [
+    {
+      "caption": "theft photo 1 \u2014 Austin",
+      "exif_datetime": "2026-04-26T10:00:00",
+      "filename": "theft-1.jpg",
+      "relative_path": "images/theft-1.jpg"
+    },
+    {
+      "caption": "theft photo 2 \u2014 Austin",
+      "exif_datetime": "2026-04-26T10:00:00",
+      "filename": "theft-2.jpg",
+      "relative_path": "images/theft-2.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Covered auto missing from street parking in Austin. Keys accounted for. Police notified.",
+    "incident_date": "2026-04-26",
+    "incident_type": "auto_theft",
+    "location": {
+      "city": "Austin",
+      "postal_code": "78701",
+      "state": "TX",
+      "street_address": "4734 Riverway"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-04-26",
+    "third_party_involved": false,
+    "vehicle": {
+      "license_plate": "2QUF140",
+      "make": "Chevrolet",
+      "model": "Equinox",
+      "odometer": 44472,
+      "prior_odometer": null,
+      "prior_odometer_date": null,
+      "vin": "VEF916C5NX79KD5GY",
+      "year": 2022
+    }
+  },
+  "injected_fraud_signals": [],
+  "line_of_business": "auto",
+  "notes_style": "contradictory",
+  "peril": "theft",
+  "policy_form": "PAP-CG-01",
+  "policy_number": "PA-2026-000050",
+  "recipe_key": "auto_theft",
+  "split": "dev"
+}

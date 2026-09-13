@@ -1,0 +1,64 @@
+{
+  "adjuster_notes": "FNOL mob. insd Reese. mechanical_breakdown @ Seattle 5/30. amt asked 1375.00. no 3p. photos 1 recvd. f/u est.",
+  "claim_id": "a64d9fdf-2008-50cd-beb1-2df20393175d",
+  "claimant": {
+    "date_of_birth": "1966-11-13",
+    "email": "reese.moreau.36@example.test",
+    "full_name": "Reese Moreau",
+    "phone": "916-555-5837"
+  },
+  "claimed_amount": {
+    "amount": "1375.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "image_captions": [
+    "mechanical_breakdown photo 1 \u2014 Seattle"
+  ],
+  "images": [
+    {
+      "caption": "mechanical_breakdown photo 1 \u2014 Seattle",
+      "exif_datetime": "2026-05-30T16:00:00",
+      "filename": "mechanical_breakdown-1.jpg",
+      "relative_path": "images/mechanical_breakdown-1.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Transmission failed on the highway near Seattle. Bumper is unmarked. Insured says they 'must have hit something.'",
+    "incident_date": "2026-05-30",
+    "incident_type": "other",
+    "location": {
+      "city": "Seattle",
+      "postal_code": "98101",
+      "state": "WA",
+      "street_address": "4597 Market St"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-05-31",
+    "third_party_involved": false,
+    "vehicle": {
+      "license_plate": "8DHM685",
+      "make": "Kia",
+      "model": "Sportage",
+      "odometer": 59049,
+      "prior_odometer": null,
+      "prior_odometer_date": null,
+      "vin": "T6TA6VLE5ZW4T6WN1",
+      "year": 2023
+    }
+  },
+  "injected_fraud_signals": [],
+  "line_of_business": "auto",
+  "notes_style": "messy",
+  "peril": "mechanical_breakdown",
+  "policy_form": "PAP-CG-01",
+  "policy_number": "PA-2026-000036",
+  "recipe_key": "auto_mechanical",
+  "split": "dev"
+}

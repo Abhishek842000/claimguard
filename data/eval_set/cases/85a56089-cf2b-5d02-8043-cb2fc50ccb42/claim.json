@@ -1,0 +1,71 @@
+{
+  "adjuster_notes": "First notice received for Logan Berg. Loss date 2026-06-09, fire in Miami, FL. Kitchen fire on the residence premises in Miami. Fire department extinguished. Smoke throughout first floor. No third party is named. Claimed amount $32718.00. Photos appear consistent with the stated peril pending a closer desk review.",
+  "claim_id": "85a56089-cf2b-5d02-8043-cb2fc50ccb42",
+  "claimant": {
+    "date_of_birth": "1993-11-10",
+    "email": "logan.berg.49@example.test",
+    "full_name": "Logan Berg",
+    "phone": "269-555-8682"
+  },
+  "claimed_amount": {
+    "amount": "32718.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "ground_truth": {
+    "coverage_status": "covered",
+    "expected_routing": "human_review",
+    "fraud_label": "legitimate",
+    "is_fraud": false,
+    "rationale": "Coverage label covered follows specimen wording for peril 'fire'. No injected fraud signals.",
+    "severity_band": "high",
+    "severity_score": 0.74
+  },
+  "image_captions": [
+    "fire photo 1 \u2014 Miami",
+    "fire photo 2 \u2014 Miami"
+  ],
+  "images": [
+    {
+      "caption": "fire photo 1 \u2014 Miami",
+      "exif_datetime": "2026-06-09T16:00:00",
+      "filename": "fire-1.jpg",
+      "relative_path": "images/fire-1.jpg"
+    },
+    {
+      "caption": "fire photo 2 \u2014 Miami",
+      "exif_datetime": "2026-06-09T16:00:00",
+      "filename": "fire-2.jpg",
+      "relative_path": "images/fire-2.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Kitchen fire on the residence premises in Miami. Fire department extinguished. Smoke throughout first floor.",
+    "incident_date": "2026-06-09",
+    "incident_type": "property_fire",
+    "location": {
+      "city": "Miami",
+      "postal_code": "33130",
+      "state": "FL",
+      "street_address": "4600 Market St"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-06-10",
+    "third_party_involved": false,
+    "vehicle": null
+  },
+  "injected_fraud_signals": [],
+  "line_of_business": "home",
+  "notes_style": "clean",
+  "peril": "fire",
+  "policy_form": "HO3-CG-01",
+  "policy_number": "HO-2026-000049",
+  "recipe_key": "home_fire",
+  "split": "eval"
+}

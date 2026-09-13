@@ -1,0 +1,1 @@
+Insured Finley Berg reports a hail loss on 2026-05-18 in Austin. Notes from the first call said the loss was 2026-05-16 and that there was no third party; the FNOL form lists third_party_involved=False. One note says airbags did not deploy; another says they did. Need a recorded statement before we lean on the photos.

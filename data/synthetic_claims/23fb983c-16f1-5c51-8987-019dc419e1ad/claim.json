@@ -1,0 +1,64 @@
+{
+  "adjuster_notes": "First notice received for Riley Hale. Loss date 2026-06-12, hail in Phoenix, AZ. Insured reports golf-ball hail in Phoenix on 2026-06-12 that dented every horizontal panel. Neighbor did not report a storm. No third party is named. Claimed amount $15967.00. Photos appear consistent with the stated peril pending a closer desk review.",
+  "claim_id": "23fb983c-16f1-5c51-8987-019dc419e1ad",
+  "claimant": {
+    "date_of_birth": "1996-08-07",
+    "email": "riley.hale.9@example.test",
+    "full_name": "Riley Hale",
+    "phone": "370-555-7658"
+  },
+  "claimed_amount": {
+    "amount": "15967.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "image_captions": [
+    "flood photo 1 \u2014 San Francisco",
+    "flood photo 2 \u2014 San Francisco"
+  ],
+  "images": [
+    {
+      "caption": "flood photo 1 \u2014 San Francisco",
+      "exif_datetime": "2026-06-12T09:00:00",
+      "filename": "hail-1.jpg",
+      "relative_path": "images/hail-1.jpg"
+    },
+    {
+      "caption": "flood photo 2 \u2014 San Francisco",
+      "exif_datetime": "2026-06-12T09:00:00",
+      "filename": "hail-2.jpg",
+      "relative_path": "images/hail-2.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Insured reports golf-ball hail in Phoenix on 2026-06-12 that dented every horizontal panel. Neighbor did not report a storm.",
+    "incident_date": "2026-06-12",
+    "incident_type": "property_weather",
+    "location": {
+      "city": "Phoenix",
+      "postal_code": "85004",
+      "state": "AZ",
+      "street_address": "6670 Market St"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-06-13",
+    "third_party_involved": false,
+    "vehicle": null
+  },
+  "injected_fraud_signals": [
+    "weather_mismatch"
+  ],
+  "line_of_business": "home",
+  "notes_style": "clean",
+  "peril": "hail",
+  "policy_form": "HO3-CG-01",
+  "policy_number": "HO-2026-000009",
+  "recipe_key": "home_flood",
+  "split": "dev"
+}

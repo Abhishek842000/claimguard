@@ -1,0 +1,78 @@
+{
+  "adjuster_notes": "First notice received for Logan Okafor. Loss date 2026-01-14, theft in Phoenix, AZ. Covered auto missing from street parking in Phoenix. Keys accounted for. Police notified. No third party is named. Claimed amount $18336.00. Photos appear consistent with the stated peril pending a closer desk review.",
+  "claim_id": "6bbeb2d7-b5a1-5961-8b66-aca8ca6a66c7",
+  "claimant": {
+    "date_of_birth": "1997-06-01",
+    "email": "logan.okafor.51@example.test",
+    "full_name": "Logan Okafor",
+    "phone": "886-555-7937"
+  },
+  "claimed_amount": {
+    "amount": "18336.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "image_captions": [
+    "theft photo 1 \u2014 Phoenix",
+    "theft photo 2 \u2014 Phoenix",
+    "theft photo 3 \u2014 Phoenix"
+  ],
+  "images": [
+    {
+      "caption": "theft photo 1 \u2014 Phoenix",
+      "exif_datetime": "2026-01-14T08:00:00",
+      "filename": "theft-1.jpg",
+      "relative_path": "images/theft-1.jpg"
+    },
+    {
+      "caption": "theft photo 2 \u2014 Phoenix",
+      "exif_datetime": "2026-01-14T08:00:00",
+      "filename": "theft-2.jpg",
+      "relative_path": "images/theft-2.jpg"
+    },
+    {
+      "caption": "theft photo 3 \u2014 Phoenix",
+      "exif_datetime": "2026-01-14T08:00:00",
+      "filename": "theft-3.jpg",
+      "relative_path": "images/theft-3.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Covered auto missing from street parking in Phoenix. Keys accounted for. Police notified.",
+    "incident_date": "2026-01-14",
+    "incident_type": "auto_theft",
+    "location": {
+      "city": "Phoenix",
+      "postal_code": "85004",
+      "state": "AZ",
+      "street_address": "6040 Summit Blvd"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-02-18",
+    "third_party_involved": false,
+    "vehicle": {
+      "license_plate": "6EVW948",
+      "make": "Chevrolet",
+      "model": "Equinox",
+      "odometer": 136139,
+      "prior_odometer": null,
+      "prior_odometer_date": null,
+      "vin": "EYG1VTKYFKZW2JFW1",
+      "year": 2022
+    }
+  },
+  "injected_fraud_signals": [],
+  "line_of_business": "auto",
+  "notes_style": "clean",
+  "peril": "theft",
+  "policy_form": "PAP-CG-01",
+  "policy_number": "PA-2026-000051",
+  "recipe_key": "auto_theft",
+  "split": "dev"
+}

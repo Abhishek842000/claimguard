@@ -1,0 +1,71 @@
+{
+  "adjuster_notes": "FNOL mob. insd Skyler. collision @ Chicago 2/10. amt asked 5146.00. 3p yes. need PR. photos 2 recvd. f/u est.",
+  "claim_id": "c6a4d346-4ed9-5bf1-b318-a8d521ac77e4",
+  "claimant": {
+    "date_of_birth": "1984-12-13",
+    "email": "skyler.okoye.29@example.test",
+    "full_name": "Skyler Okoye",
+    "phone": "327-555-8679"
+  },
+  "claimed_amount": {
+    "amount": "5146.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "image_captions": [
+    "collision photo 1 \u2014 Chicago",
+    "collision photo 2 \u2014 Chicago"
+  ],
+  "images": [
+    {
+      "caption": "collision photo 1 \u2014 Chicago",
+      "exif_datetime": "2026-02-10T15:00:00",
+      "filename": "collision-1.jpg",
+      "relative_path": "images/collision-1.jpg"
+    },
+    {
+      "caption": "collision photo 2 \u2014 Chicago",
+      "exif_datetime": "2026-02-10T15:00:00",
+      "filename": "collision-2.jpg",
+      "relative_path": "images/collision-2.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Low-to-moderate speed impact in Chicago. Another driver is identified. Visible bumper and lamp damage.",
+    "incident_date": "2026-02-10",
+    "incident_type": "auto_collision",
+    "location": {
+      "city": "Chicago",
+      "postal_code": "60611",
+      "state": "IL",
+      "street_address": "4560 Lakeshore Dr"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-02-10",
+    "third_party_involved": true,
+    "vehicle": {
+      "license_plate": "1FZJ709",
+      "make": "Kia",
+      "model": "Sportage",
+      "odometer": 110167,
+      "prior_odometer": null,
+      "prior_odometer_date": null,
+      "vin": "VCRVV6ERTN4HRKUKE",
+      "year": 2023
+    }
+  },
+  "injected_fraud_signals": [],
+  "line_of_business": "auto",
+  "notes_style": "messy",
+  "peril": "collision",
+  "policy_form": "PAP-CG-01",
+  "policy_number": "PA-2026-000029",
+  "recipe_key": "auto_collision",
+  "split": "dev"
+}

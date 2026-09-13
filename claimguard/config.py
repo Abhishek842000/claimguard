@@ -37,8 +37,12 @@ class Settings(BaseSettings):
     )
 
     embedding_dim: int = Field(
-        default=384,
-        description="Must match the pgvector column width and the embedding model.",
+        default=768,
+        description="Must match the pgvector column width and BAAI/bge-base-en-v1.5.",
+    )
+    embedding_model: str = Field(
+        default="BAAI/bge-base-en-v1.5",
+        description="FastEmbed / HF model id used by ingest and query scripts.",
     )
 
     cheap_model: str = Field(default="openai/gpt-4o-mini")

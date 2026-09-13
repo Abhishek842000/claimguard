@@ -1,0 +1,1 @@
+Insured Skyler Cho reports a collision loss on 2026-04-20 in Nashville. Notes from the first call said the loss was 2026-04-18 and that there was no third party; the FNOL form lists third_party_involved=True. One note says airbags did not deploy; another says they did. Need a recorded statement before we lean on the photos.

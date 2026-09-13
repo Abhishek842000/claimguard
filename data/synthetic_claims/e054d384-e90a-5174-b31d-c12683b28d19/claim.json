@@ -1,0 +1,71 @@
+{
+  "adjuster_notes": "First notice received for Drew Nguyen. Loss date 2026-04-13, collision in Denver, CO. Low-to-moderate speed impact in Denver. Another driver is identified. Visible bumper and lamp damage. A third party is involved; request the police report before settlement. Claimed amount $2342.00. Photos appear consistent with the stated peril pending a closer desk review.",
+  "claim_id": "e054d384-e90a-5174-b31d-c12683b28d19",
+  "claimant": {
+    "date_of_birth": "1998-05-18",
+    "email": "drew.nguyen.4@example.test",
+    "full_name": "Drew Nguyen",
+    "phone": "590-555-8668"
+  },
+  "claimed_amount": {
+    "amount": "2342.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "image_captions": [
+    "collision photo 1 \u2014 Denver",
+    "collision photo 2 \u2014 Denver"
+  ],
+  "images": [
+    {
+      "caption": "collision photo 1 \u2014 Denver",
+      "exif_datetime": "2026-04-13T15:00:00",
+      "filename": "collision-1.jpg",
+      "relative_path": "images/collision-1.jpg"
+    },
+    {
+      "caption": "collision photo 2 \u2014 Denver",
+      "exif_datetime": "2026-04-13T15:00:00",
+      "filename": "collision-2.jpg",
+      "relative_path": "images/collision-2.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Low-to-moderate speed impact in Denver. Another driver is identified. Visible bumper and lamp damage.",
+    "incident_date": "2026-04-13",
+    "incident_type": "auto_collision",
+    "location": {
+      "city": "Denver",
+      "postal_code": "80203",
+      "state": "CO",
+      "street_address": "288 Pine Ave"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-04-14",
+    "third_party_involved": true,
+    "vehicle": {
+      "license_plate": "1DEU263",
+      "make": "Chevrolet",
+      "model": "Equinox",
+      "odometer": 115819,
+      "prior_odometer": null,
+      "prior_odometer_date": null,
+      "vin": "P826KTJST420RJ98F",
+      "year": 2022
+    }
+  },
+  "injected_fraud_signals": [],
+  "line_of_business": "auto",
+  "notes_style": "clean",
+  "peril": "collision",
+  "policy_form": "PAP-CG-01",
+  "policy_number": "PA-2026-000004",
+  "recipe_key": "auto_collision",
+  "split": "dev"
+}

@@ -1,0 +1,62 @@
+{
+  "adjuster_notes": "First notice received for Morgan Berg. Loss date 2026-03-15, wind in Atlanta, GA. Wind-thrown limb punctured the rear roof plane in Atlanta. No third party is named. Claimed amount $11585.00. Photos appear consistent with the stated peril pending a closer desk review.",
+  "claim_id": "1f02e907-7eaf-5b17-8ec2-124a3a110c8a",
+  "claimant": {
+    "date_of_birth": "1967-02-20",
+    "email": "morgan.berg.15@example.test",
+    "full_name": "Morgan Berg",
+    "phone": "382-555-5349"
+  },
+  "claimed_amount": {
+    "amount": "11585.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "image_captions": [
+    "wind photo 1 \u2014 Atlanta",
+    "wind photo 2 \u2014 Atlanta"
+  ],
+  "images": [
+    {
+      "caption": "wind photo 1 \u2014 Atlanta",
+      "exif_datetime": "2026-03-15T14:00:00",
+      "filename": "wind-1.jpg",
+      "relative_path": "images/wind-1.jpg"
+    },
+    {
+      "caption": "wind photo 2 \u2014 Atlanta",
+      "exif_datetime": "2026-03-15T14:00:00",
+      "filename": "wind-2.jpg",
+      "relative_path": "images/wind-2.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Wind-thrown limb punctured the rear roof plane in Atlanta.",
+    "incident_date": "2026-03-15",
+    "incident_type": "property_weather",
+    "location": {
+      "city": "Atlanta",
+      "postal_code": "30303",
+      "state": "GA",
+      "street_address": "7219 Oak Ct"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-03-15",
+    "third_party_involved": false,
+    "vehicle": null
+  },
+  "injected_fraud_signals": [],
+  "line_of_business": "home",
+  "notes_style": "clean",
+  "peril": "wind",
+  "policy_form": "HO3-CG-01",
+  "policy_number": "HO-2026-000015",
+  "recipe_key": "home_wind",
+  "split": "dev"
+}

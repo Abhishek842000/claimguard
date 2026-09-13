@@ -1,0 +1,64 @@
+{
+  "adjuster_notes": "Insured Morgan Ibrahim reports a mechanical_breakdown loss on 2026-02-07 in Seattle. Notes from the first call said the loss was 2026-02-05 and that there was no third party; the FNOL form lists third_party_involved=False. One note says airbags did not deploy; another says they did. Need a recorded statement before we lean on the photos.",
+  "claim_id": "aecd11d2-4bcf-51e3-ae5f-39e2c8bf24a8",
+  "claimant": {
+    "date_of_birth": "1971-08-17",
+    "email": "morgan.ibrahim.40@example.test",
+    "full_name": "Morgan Ibrahim",
+    "phone": "570-555-9408"
+  },
+  "claimed_amount": {
+    "amount": "2744.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "image_captions": [
+    "mechanical_breakdown photo 1 \u2014 Seattle"
+  ],
+  "images": [
+    {
+      "caption": "mechanical_breakdown photo 1 \u2014 Seattle",
+      "exif_datetime": "2026-02-07T10:00:00",
+      "filename": "mechanical_breakdown-1.jpg",
+      "relative_path": "images/mechanical_breakdown-1.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Transmission failed on the highway near Seattle. Bumper is unmarked. Insured says they 'must have hit something.'",
+    "incident_date": "2026-02-07",
+    "incident_type": "other",
+    "location": {
+      "city": "Seattle",
+      "postal_code": "98101",
+      "state": "WA",
+      "street_address": "3729 Market St"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-03-14",
+    "third_party_involved": false,
+    "vehicle": {
+      "license_plate": "7QDX165",
+      "make": "Honda",
+      "model": "Civic",
+      "odometer": 74422,
+      "prior_odometer": null,
+      "prior_odometer_date": null,
+      "vin": "UKJTMHBJAZSXBMTDJ",
+      "year": 2018
+    }
+  },
+  "injected_fraud_signals": [],
+  "line_of_business": "auto",
+  "notes_style": "contradictory",
+  "peril": "mechanical_breakdown",
+  "policy_form": "PAP-CG-01",
+  "policy_number": "PA-2026-000040",
+  "recipe_key": "auto_mechanical",
+  "split": "dev"
+}

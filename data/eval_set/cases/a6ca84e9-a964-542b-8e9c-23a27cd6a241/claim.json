@@ -1,0 +1,73 @@
+{
+  "adjuster_notes": "First notice received for Drew Vargas. Loss date 2026-07-16, fire in San Francisco, CA. Kitchen fire on the residence premises in San Francisco. Fire department extinguished. Smoke throughout first floor. No third party is named. Claimed amount $34293.00. Photos appear consistent with the stated peril pending a closer desk review.",
+  "claim_id": "a6ca84e9-a964-542b-8e9c-23a27cd6a241",
+  "claimant": {
+    "date_of_birth": "1994-01-24",
+    "email": "drew.vargas.5@example.test",
+    "full_name": "Drew Vargas",
+    "phone": "645-555-3591"
+  },
+  "claimed_amount": {
+    "amount": "34293.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "ground_truth": {
+    "coverage_status": "covered",
+    "expected_routing": "human_review",
+    "fraud_label": "fraud",
+    "is_fraud": true,
+    "rationale": "Coverage label covered follows specimen wording for peril 'fire'. Fraud label is positive because injected signals mileage_inconsistency.",
+    "severity_band": "high",
+    "severity_score": 0.74
+  },
+  "image_captions": [
+    "fire photo 1 \u2014 San Francisco",
+    "fire photo 2 \u2014 San Francisco"
+  ],
+  "images": [
+    {
+      "caption": "fire photo 1 \u2014 San Francisco",
+      "exif_datetime": "2026-07-16T15:00:00",
+      "filename": "fire-1.jpg",
+      "relative_path": "images/fire-1.jpg"
+    },
+    {
+      "caption": "fire photo 2 \u2014 San Francisco",
+      "exif_datetime": "2026-07-16T15:00:00",
+      "filename": "fire-2.jpg",
+      "relative_path": "images/fire-2.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Kitchen fire on the residence premises in San Francisco. Fire department extinguished. Smoke throughout first floor.",
+    "incident_date": "2026-07-16",
+    "incident_type": "property_fire",
+    "location": {
+      "city": "San Francisco",
+      "postal_code": "94103",
+      "state": "CA",
+      "street_address": "4415 Cedar Rd"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-07-24",
+    "third_party_involved": false,
+    "vehicle": null
+  },
+  "injected_fraud_signals": [
+    "mileage_inconsistency"
+  ],
+  "line_of_business": "home",
+  "notes_style": "clean",
+  "peril": "fire",
+  "policy_form": "HO3-CG-01",
+  "policy_number": "HO-2026-000005",
+  "recipe_key": "home_fire",
+  "split": "eval"
+}

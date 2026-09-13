@@ -1,0 +1,1 @@
+Insured Harper Sullivan reports a wind loss on 2026-04-02 in Nashville. Notes from the first call said the loss was 2026-04-01 and that there was no third party; the FNOL form lists third_party_involved=False. One note says airbags did not deploy; another says they did. Need a recorded statement before we lean on the photos.

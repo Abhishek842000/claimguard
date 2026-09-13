@@ -1,0 +1,19 @@
+{
+  "description": "Frozen severe-weather fixture used instead of a live NOAA CDO call. Refresh with a NOAA token via claimguard.data_gen.weather.refresh_from_noaa if you need a newer extract. Events are synthetic-but-plausible for the ClaimGuard city set.",
+  "source": "fixture (NOAA CDO-compatible shape: station/city, date, event_type)",
+  "events": [
+    {"city": "Denver", "state": "CO", "date": "2026-06-12", "type": "hail", "magnitude": "1.25 in"},
+    {"city": "Denver", "state": "CO", "date": "2026-07-04", "type": "thunderstorm_wind", "magnitude": "60 kt"},
+    {"city": "Austin", "state": "TX", "date": "2026-05-18", "type": "hail", "magnitude": "1.00 in"},
+    {"city": "Austin", "state": "TX", "date": "2026-09-01", "type": "flash_flood", "magnitude": null},
+    {"city": "Chicago", "state": "IL", "date": "2026-04-22", "type": "hail", "magnitude": "0.88 in"},
+    {"city": "Chicago", "state": "IL", "date": "2026-01-19", "type": "winter_storm", "magnitude": null},
+    {"city": "Seattle", "state": "WA", "date": "2026-11-08", "type": "high_wind", "magnitude": "52 kt"},
+    {"city": "Atlanta", "state": "GA", "date": "2026-03-15", "type": "thunderstorm_wind", "magnitude": "55 kt"},
+    {"city": "Atlanta", "state": "GA", "date": "2026-08-09", "type": "flash_flood", "magnitude": null},
+    {"city": "Nashville", "state": "TN", "date": "2026-04-02", "type": "hail", "magnitude": "1.50 in"},
+    {"city": "Boston", "state": "MA", "date": "2026-02-11", "type": "winter_storm", "magnitude": null},
+    {"city": "Miami", "state": "FL", "date": "2026-09-20", "type": "tropical_storm", "magnitude": null},
+    {"city": "San Francisco", "state": "CA", "date": "2026-01-05", "type": "high_wind", "magnitude": "48 kt"}
+  ]
+}

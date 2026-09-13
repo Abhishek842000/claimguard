@@ -1,0 +1,80 @@
+{
+  "adjuster_notes": "First notice received for Morgan Okoye. Loss date 2026-07-17, collision in Atlanta, GA. Low-to-moderate speed impact in Atlanta. No other vehicle is named. Visible bumper and lamp damage. No third party is named. Claimed amount $6015.00. Photos appear consistent with the stated peril pending a closer desk review.",
+  "claim_id": "f7b55472-d5aa-54a3-971e-4a38bed4c5eb",
+  "claimant": {
+    "date_of_birth": "1972-11-27",
+    "email": "morgan.okoye.31@example.test",
+    "full_name": "Morgan Okoye",
+    "phone": "316-555-8560"
+  },
+  "claimed_amount": {
+    "amount": "6015.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "ground_truth": {
+    "coverage_status": "covered",
+    "expected_routing": "auto_resolve",
+    "fraud_label": "legitimate",
+    "is_fraud": false,
+    "rationale": "Coverage label covered follows specimen wording for peril 'collision'. No injected fraud signals.",
+    "severity_band": "moderate",
+    "severity_score": 0.48
+  },
+  "image_captions": [
+    "collision photo 1 \u2014 Atlanta",
+    "collision photo 2 \u2014 Atlanta"
+  ],
+  "images": [
+    {
+      "caption": "collision photo 1 \u2014 Atlanta",
+      "exif_datetime": "2026-07-17T10:00:00",
+      "filename": "collision-1.jpg",
+      "relative_path": "images/collision-1.jpg"
+    },
+    {
+      "caption": "collision photo 2 \u2014 Atlanta",
+      "exif_datetime": "2026-07-17T10:00:00",
+      "filename": "collision-2.jpg",
+      "relative_path": "images/collision-2.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Low-to-moderate speed impact in Atlanta. No other vehicle is named. Visible bumper and lamp damage.",
+    "incident_date": "2026-07-17",
+    "incident_type": "auto_collision",
+    "location": {
+      "city": "Atlanta",
+      "postal_code": "30303",
+      "state": "GA",
+      "street_address": "2622 Lakeshore Dr"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-07-19",
+    "third_party_involved": false,
+    "vehicle": {
+      "license_plate": "3JRA665",
+      "make": "Honda",
+      "model": "Civic",
+      "odometer": 65476,
+      "prior_odometer": null,
+      "prior_odometer_date": null,
+      "vin": "63DN085DPUJV58HBS",
+      "year": 2018
+    }
+  },
+  "injected_fraud_signals": [],
+  "line_of_business": "auto",
+  "notes_style": "clean",
+  "peril": "collision",
+  "policy_form": "PAP-CG-01",
+  "policy_number": "PA-2026-000031",
+  "recipe_key": "auto_collision",
+  "split": "eval"
+}

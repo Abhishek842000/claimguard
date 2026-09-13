@@ -1,0 +1,73 @@
+{
+  "adjuster_notes": "First notice received for Casey Patel. Loss date 2026-06-12, hail in Phoenix, AZ. Insured reports golf-ball hail in Phoenix on 2026-06-12 that dented every horizontal panel. Neighbor did not report a storm. A third party is involved; request the police report before settlement. Claimed amount $6225.00. Photos appear consistent with the stated peril pending a closer desk review.",
+  "claim_id": "09d919dc-2168-544f-8ec0-4a0f018c8ef6",
+  "claimant": {
+    "date_of_birth": "1973-10-07",
+    "email": "casey.patel.39@example.test",
+    "full_name": "Casey Patel",
+    "phone": "541-555-4990"
+  },
+  "claimed_amount": {
+    "amount": "6225.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "image_captions": [
+    "collision photo 1 \u2014 San Francisco",
+    "collision photo 2 \u2014 San Francisco"
+  ],
+  "images": [
+    {
+      "caption": "collision photo 1 \u2014 San Francisco",
+      "exif_datetime": "2026-06-12T15:00:00",
+      "filename": "hail-1.jpg",
+      "relative_path": "images/hail-1.jpg"
+    },
+    {
+      "caption": "collision photo 2 \u2014 San Francisco",
+      "exif_datetime": "2026-06-12T15:00:00",
+      "filename": "hail-2.jpg",
+      "relative_path": "images/hail-2.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Insured reports golf-ball hail in Phoenix on 2026-06-12 that dented every horizontal panel. Neighbor did not report a storm.",
+    "incident_date": "2026-06-12",
+    "incident_type": "auto_weather",
+    "location": {
+      "city": "Phoenix",
+      "postal_code": "85004",
+      "state": "AZ",
+      "street_address": "1224 Highland Dr"
+    },
+    "police_report_number": "CA-770556",
+    "reported_date": "2026-06-13",
+    "third_party_involved": true,
+    "vehicle": {
+      "license_plate": "5GDO193",
+      "make": "Ford",
+      "model": "Escape",
+      "odometer": 98870,
+      "prior_odometer": null,
+      "prior_odometer_date": null,
+      "vin": "3G83UC0P55S0G0ZD2",
+      "year": 2020
+    }
+  },
+  "injected_fraud_signals": [
+    "weather_mismatch"
+  ],
+  "line_of_business": "auto",
+  "notes_style": "clean",
+  "peril": "hail",
+  "policy_form": "PAP-CG-01",
+  "policy_number": "PA-2026-000039",
+  "recipe_key": "auto_collision",
+  "split": "dev"
+}

@@ -1,0 +1,73 @@
+{
+  "adjuster_notes": "Insured Riley Brennan reports a collision loss on 2026-03-12 in Chicago. Notes from the first call said the loss was 2026-03-10 and that there was no third party; the FNOL form lists third_party_involved=True. One note says airbags did not deploy; another says they did. Need a recorded statement before we lean on the photos.",
+  "claim_id": "b27da3be-7230-5119-8d77-d50afc91a5d8",
+  "claimant": {
+    "date_of_birth": "1970-02-14",
+    "email": "riley.brennan.42@example.test",
+    "full_name": "Riley Brennan",
+    "phone": "268-555-2494"
+  },
+  "claimed_amount": {
+    "amount": "1598.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "ground_truth": {
+    "coverage_status": "covered",
+    "expected_routing": "human_review",
+    "fraud_label": "legitimate",
+    "is_fraud": false,
+    "rationale": "Coverage label covered follows specimen wording for peril 'collision'. No injected fraud signals.",
+    "severity_band": "low",
+    "severity_score": 0.28
+  },
+  "image_captions": [
+    "collision photo 1 \u2014 Chicago"
+  ],
+  "images": [
+    {
+      "caption": "collision photo 1 \u2014 Chicago",
+      "exif_datetime": "2026-03-12T17:00:00",
+      "filename": "collision-1.jpg",
+      "relative_path": "images/collision-1.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Low-to-moderate speed impact in Chicago. Another driver is identified. Visible bumper and lamp damage.",
+    "incident_date": "2026-03-12",
+    "incident_type": "auto_collision",
+    "location": {
+      "city": "Chicago",
+      "postal_code": "60611",
+      "state": "IL",
+      "street_address": "1682 Oak Ct"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-03-16",
+    "third_party_involved": true,
+    "vehicle": {
+      "license_plate": "6NKV361",
+      "make": "Chevrolet",
+      "model": "Equinox",
+      "odometer": 61060,
+      "prior_odometer": null,
+      "prior_odometer_date": null,
+      "vin": "1V694GHP45R3Y623G",
+      "year": 2022
+    }
+  },
+  "injected_fraud_signals": [],
+  "line_of_business": "auto",
+  "notes_style": "contradictory",
+  "peril": "collision",
+  "policy_form": "PAP-CG-01",
+  "policy_number": "PA-2026-000042",
+  "recipe_key": "auto_collision_low",
+  "split": "eval"
+}

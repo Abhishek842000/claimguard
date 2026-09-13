@@ -1,0 +1,73 @@
+{
+  "adjuster_notes": "First notice received for Jordan Diaz. Loss date 2026-02-20, collision in Miami, FL. Low-to-moderate speed impact in Miami. No other vehicle is named. Visible bumper and lamp damage. No third party is named. Claimed amount $18500.00. Photos appear consistent with the stated peril pending a closer desk review.",
+  "claim_id": "3f9dd255-6594-57af-bfb7-5b3404db6c74",
+  "claimant": {
+    "date_of_birth": "1988-10-07",
+    "email": "jordan.diaz.1@example.test",
+    "full_name": "Jordan Diaz",
+    "phone": "280-555-5803"
+  },
+  "claimed_amount": {
+    "amount": "18500.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "image_captions": [
+    "collision photo 1 \u2014 Miami",
+    "collision photo 2 \u2014 Miami"
+  ],
+  "images": [
+    {
+      "caption": "collision photo 1 \u2014 Miami",
+      "exif_datetime": "2026-02-20T14:00:00",
+      "filename": "collision-1.jpg",
+      "relative_path": "images/collision-1.jpg"
+    },
+    {
+      "caption": "collision photo 2 \u2014 Miami",
+      "exif_datetime": "2026-02-20T14:00:00",
+      "filename": "collision-2.jpg",
+      "relative_path": "images/collision-2.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Low-to-moderate speed impact in Miami. No other vehicle is named. Visible bumper and lamp damage.",
+    "incident_date": "2026-02-20",
+    "incident_type": "auto_collision",
+    "location": {
+      "city": "Miami",
+      "postal_code": "33130",
+      "state": "FL",
+      "street_address": "1239 Market St"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-02-28",
+    "third_party_involved": false,
+    "vehicle": {
+      "license_plate": "5ZBX570",
+      "make": "Nissan",
+      "model": "Altima",
+      "odometer": 82284,
+      "prior_odometer": null,
+      "prior_odometer_date": null,
+      "vin": "R5UAL4YUKPYGF1GZZ",
+      "year": 2016
+    }
+  },
+  "injected_fraud_signals": [
+    "inflated_estimate"
+  ],
+  "line_of_business": "auto",
+  "notes_style": "clean",
+  "peril": "collision",
+  "policy_form": "PAP-CG-01",
+  "policy_number": "PA-2026-000001",
+  "recipe_key": "auto_collision",
+  "split": "dev"
+}

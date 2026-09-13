@@ -1,0 +1,73 @@
+{
+  "adjuster_notes": "Insured Avery Vargas reports a vandalism loss on 2026-03-27 in Atlanta. Notes from the first call said the loss was 2026-03-25 and that there was no third party; the FNOL form lists third_party_involved=False. One note says airbags did not deploy; another says they did. Need a recorded statement before we lean on the photos.",
+  "claim_id": "1a708b4a-c4dd-5549-ac49-22aa1d3303c2",
+  "claimant": {
+    "date_of_birth": "1999-10-08",
+    "email": "avery.vargas.20@example.test",
+    "full_name": "Avery Vargas",
+    "phone": "629-555-9818"
+  },
+  "claimed_amount": {
+    "amount": "1706.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "ground_truth": {
+    "coverage_status": "covered",
+    "expected_routing": "human_review",
+    "fraud_label": "legitimate",
+    "is_fraud": false,
+    "rationale": "Coverage label covered follows specimen wording for peril 'vandalism'. No injected fraud signals.",
+    "severity_band": "low",
+    "severity_score": 0.28
+  },
+  "image_captions": [
+    "vandalism photo 1 \u2014 Atlanta"
+  ],
+  "images": [
+    {
+      "caption": "vandalism photo 1 \u2014 Atlanta",
+      "exif_datetime": "2026-03-27T09:00:00",
+      "filename": "vandalism-1.jpg",
+      "relative_path": "images/vandalism-1.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Keyed panels and a smashed side glass overnight in Atlanta.",
+    "incident_date": "2026-03-27",
+    "incident_type": "auto_vandalism",
+    "location": {
+      "city": "Atlanta",
+      "postal_code": "30303",
+      "state": "GA",
+      "street_address": "8099 Highland Dr"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-03-28",
+    "third_party_involved": false,
+    "vehicle": {
+      "license_plate": "7PAL405",
+      "make": "Toyota",
+      "model": "Camry",
+      "odometer": 110759,
+      "prior_odometer": null,
+      "prior_odometer_date": null,
+      "vin": "JKR1KPE33Y63DP31B",
+      "year": 2019
+    }
+  },
+  "injected_fraud_signals": [],
+  "line_of_business": "auto",
+  "notes_style": "contradictory",
+  "peril": "vandalism",
+  "policy_form": "PAP-CG-01",
+  "policy_number": "PA-2026-000020",
+  "recipe_key": "auto_vandalism",
+  "split": "eval"
+}

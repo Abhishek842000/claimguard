@@ -12,6 +12,14 @@ def test_empty_eval_set_returns_empty_list() -> None:
     assert load_eval_set("does-not-exist") == []
 
 
+def test_v0_rows_are_labeled_when_generated() -> None:
+    rows = load_eval_set("v0")
+    if not rows:
+        return
+    assert all("ground_truth_fraud_label" in row for row in rows)
+    assert all(row["split"] == "eval" for row in rows)
+
+
 def test_judge_schema_example() -> None:
     scores = JudgeScores(
         grounding=0.9,

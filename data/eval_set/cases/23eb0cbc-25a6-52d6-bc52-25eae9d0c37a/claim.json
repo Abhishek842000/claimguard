@@ -1,0 +1,80 @@
+{
+  "adjuster_notes": "First notice received for Avery Brennan. Loss date 2026-06-18, collision in San Francisco, CA. Low-to-moderate speed impact in San Francisco. No other vehicle is named. Visible bumper and lamp damage. No third party is named. Claimed amount $3637.00. Photos appear consistent with the stated peril pending a closer desk review.",
+  "claim_id": "23eb0cbc-25a6-52d6-bc52-25eae9d0c37a",
+  "claimant": {
+    "date_of_birth": "1986-03-12",
+    "email": "avery.brennan.44@example.test",
+    "full_name": "Avery Brennan",
+    "phone": "629-555-8432"
+  },
+  "claimed_amount": {
+    "amount": "3637.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "ground_truth": {
+    "coverage_status": "covered",
+    "expected_routing": "auto_resolve",
+    "fraud_label": "legitimate",
+    "is_fraud": false,
+    "rationale": "Coverage label covered follows specimen wording for peril 'collision'. No injected fraud signals.",
+    "severity_band": "moderate",
+    "severity_score": 0.48
+  },
+  "image_captions": [
+    "collision photo 1 \u2014 San Francisco",
+    "collision photo 2 \u2014 San Francisco"
+  ],
+  "images": [
+    {
+      "caption": "collision photo 1 \u2014 San Francisco",
+      "exif_datetime": "2026-06-18T16:00:00",
+      "filename": "collision-1.jpg",
+      "relative_path": "images/collision-1.jpg"
+    },
+    {
+      "caption": "collision photo 2 \u2014 San Francisco",
+      "exif_datetime": "2026-06-18T16:00:00",
+      "filename": "collision-2.jpg",
+      "relative_path": "images/collision-2.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Low-to-moderate speed impact in San Francisco. No other vehicle is named. Visible bumper and lamp damage.",
+    "incident_date": "2026-06-18",
+    "incident_type": "auto_collision",
+    "location": {
+      "city": "San Francisco",
+      "postal_code": "94103",
+      "state": "CA",
+      "street_address": "5205 Oak Ct"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-06-20",
+    "third_party_involved": false,
+    "vehicle": {
+      "license_plate": "2EXU131",
+      "make": "Chevrolet",
+      "model": "Equinox",
+      "odometer": 24026,
+      "prior_odometer": null,
+      "prior_odometer_date": null,
+      "vin": "0HUR4BUBMUWYZAMK2",
+      "year": 2022
+    }
+  },
+  "injected_fraud_signals": [],
+  "line_of_business": "auto",
+  "notes_style": "clean",
+  "peril": "collision",
+  "policy_form": "PAP-CG-01",
+  "policy_number": "PA-2026-000044",
+  "recipe_key": "auto_collision",
+  "split": "eval"
+}

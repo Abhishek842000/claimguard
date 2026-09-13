@@ -1,0 +1,62 @@
+{
+  "adjuster_notes": "Insured Harper Sullivan reports a wind loss on 2026-04-02 in Nashville. Notes from the first call said the loss was 2026-04-01 and that there was no third party; the FNOL form lists third_party_involved=False. One note says airbags did not deploy; another says they did. Need a recorded statement before we lean on the photos.",
+  "claim_id": "a8fb4973-9b3e-5cf6-abd7-e98cb87ed363",
+  "claimant": {
+    "date_of_birth": "1982-09-16",
+    "email": "harper.sullivan.19@example.test",
+    "full_name": "Harper Sullivan",
+    "phone": "465-555-5050"
+  },
+  "claimed_amount": {
+    "amount": "9791.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "image_captions": [
+    "wind photo 1 \u2014 Nashville",
+    "wind photo 2 \u2014 Nashville"
+  ],
+  "images": [
+    {
+      "caption": "wind photo 1 \u2014 Nashville",
+      "exif_datetime": "2026-04-02T17:00:00",
+      "filename": "wind-1.jpg",
+      "relative_path": "images/wind-1.jpg"
+    },
+    {
+      "caption": "wind photo 2 \u2014 Nashville",
+      "exif_datetime": "2026-04-02T17:00:00",
+      "filename": "wind-2.jpg",
+      "relative_path": "images/wind-2.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Wind-thrown limb punctured the rear roof plane in Nashville.",
+    "incident_date": "2026-04-02",
+    "incident_type": "property_weather",
+    "location": {
+      "city": "Nashville",
+      "postal_code": "37203",
+      "state": "TN",
+      "street_address": "4019 Summit Blvd"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-04-02",
+    "third_party_involved": false,
+    "vehicle": null
+  },
+  "injected_fraud_signals": [],
+  "line_of_business": "home",
+  "notes_style": "contradictory",
+  "peril": "wind",
+  "policy_form": "HO3-CG-01",
+  "policy_number": "HO-2026-000019",
+  "recipe_key": "home_wind",
+  "split": "dev"
+}

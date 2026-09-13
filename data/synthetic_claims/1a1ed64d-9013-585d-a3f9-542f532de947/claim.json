@@ -1,0 +1,80 @@
+{
+  "adjuster_notes": "Insured Skyler Cho reports a collision loss on 2026-04-20 in Nashville. Notes from the first call said the loss was 2026-04-18 and that there was no third party; the FNOL form lists third_party_involved=True. One note says airbags did not deploy; another says they did. Need a recorded statement before we lean on the photos.",
+  "claim_id": "1a1ed64d-9013-585d-a3f9-542f532de947",
+  "claimant": {
+    "date_of_birth": "1982-03-26",
+    "email": "skyler.cho.13@example.test",
+    "full_name": "Skyler Cho",
+    "phone": "952-555-5065"
+  },
+  "claimed_amount": {
+    "amount": "1879.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "image_captions": [
+    "collision photo 1 \u2014 Nashville",
+    "collision photo 2 \u2014 Nashville",
+    "collision photo 3 \u2014 Nashville"
+  ],
+  "images": [
+    {
+      "caption": "collision photo 1 \u2014 Nashville",
+      "exif_datetime": "2026-04-20T15:00:00",
+      "filename": "collision-1.jpg",
+      "relative_path": "images/collision-1.jpg"
+    },
+    {
+      "caption": "collision photo 2 \u2014 Nashville",
+      "exif_datetime": "2026-04-20T15:00:00",
+      "filename": "collision-2.jpg",
+      "relative_path": "images/collision-2.jpg"
+    },
+    {
+      "caption": "collision photo 3 \u2014 Nashville",
+      "exif_datetime": "2026-04-20T15:00:00",
+      "filename": "collision-3.jpg",
+      "relative_path": "images/collision-3.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Low-to-moderate speed impact in Nashville. Another driver is identified. Visible bumper and lamp damage.",
+    "incident_date": "2026-04-20",
+    "incident_type": "auto_collision",
+    "location": {
+      "city": "Nashville",
+      "postal_code": "37203",
+      "state": "TN",
+      "street_address": "1871 Riverway"
+    },
+    "police_report_number": "TN-448321",
+    "reported_date": "2026-04-24",
+    "third_party_involved": true,
+    "vehicle": {
+      "license_plate": "3ZZF522",
+      "make": "Ford",
+      "model": "Escape",
+      "odometer": 15248,
+      "prior_odometer": null,
+      "prior_odometer_date": null,
+      "vin": "KNVPDDXDD79LD9FME",
+      "year": 2020
+    }
+  },
+  "injected_fraud_signals": [
+    "duplicate_vin"
+  ],
+  "line_of_business": "auto",
+  "notes_style": "contradictory",
+  "peril": "collision",
+  "policy_form": "PAP-CG-01",
+  "policy_number": "PA-2026-000013",
+  "recipe_key": "auto_collision",
+  "split": "dev"
+}

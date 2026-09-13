@@ -1,0 +1,69 @@
+{
+  "adjuster_notes": "First notice received for Avery Okoye. Loss date 2026-02-07, sudden_pipe in Chicago, IL. Supply line under the sink burst while the insured was home in Chicago. Water stopped within an hour. No third party is named. Claimed amount $6732.00. Photos appear consistent with the stated peril pending a closer desk review.",
+  "claim_id": "4edf68dd-bb18-5967-9304-529f57d29697",
+  "claimant": {
+    "date_of_birth": "1976-11-16",
+    "email": "avery.okoye.48@example.test",
+    "full_name": "Avery Okoye",
+    "phone": "356-555-2234"
+  },
+  "claimed_amount": {
+    "amount": "6732.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "image_captions": [
+    "sudden_pipe photo 1 \u2014 Chicago",
+    "sudden_pipe photo 2 \u2014 Chicago",
+    "sudden_pipe photo 3 \u2014 Chicago"
+  ],
+  "images": [
+    {
+      "caption": "sudden_pipe photo 1 \u2014 Chicago",
+      "exif_datetime": "2026-02-07T13:00:00",
+      "filename": "sudden_pipe-1.jpg",
+      "relative_path": "images/sudden_pipe-1.jpg"
+    },
+    {
+      "caption": "sudden_pipe photo 2 \u2014 Chicago",
+      "exif_datetime": "2026-02-07T13:00:00",
+      "filename": "sudden_pipe-2.jpg",
+      "relative_path": "images/sudden_pipe-2.jpg"
+    },
+    {
+      "caption": "sudden_pipe photo 3 \u2014 Chicago",
+      "exif_datetime": "2026-02-07T13:00:00",
+      "filename": "sudden_pipe-3.jpg",
+      "relative_path": "images/sudden_pipe-3.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Supply line under the sink burst while the insured was home in Chicago. Water stopped within an hour.",
+    "incident_date": "2026-02-07",
+    "incident_type": "property_water",
+    "location": {
+      "city": "Chicago",
+      "postal_code": "60611",
+      "state": "IL",
+      "street_address": "7701 Lakeshore Dr"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-02-08",
+    "third_party_involved": false,
+    "vehicle": null
+  },
+  "injected_fraud_signals": [],
+  "line_of_business": "home",
+  "notes_style": "clean",
+  "peril": "sudden_pipe",
+  "policy_form": "HO3-CG-01",
+  "policy_number": "HO-2026-000048",
+  "recipe_key": "home_pipe",
+  "split": "dev"
+}

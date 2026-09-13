@@ -1,0 +1,64 @@
+{
+  "adjuster_notes": "First notice received for Quinn Singh. Loss date 2026-07-13, mechanical_breakdown in Boston, MA. Transmission failed on the highway near Boston. Bumper is unmarked. Insured says they 'must have hit something.' No third party is named. Claimed amount $1133.00. Photos appear consistent with the stated peril pending a closer desk review.",
+  "claim_id": "99bfb7dc-3f3a-5dbb-914b-7240dbf81a29",
+  "claimant": {
+    "date_of_birth": "1979-09-18",
+    "email": "quinn.singh.46@example.test",
+    "full_name": "Quinn Singh",
+    "phone": "589-555-9725"
+  },
+  "claimed_amount": {
+    "amount": "1133.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "image_captions": [
+    "mechanical_breakdown photo 1 \u2014 Boston"
+  ],
+  "images": [
+    {
+      "caption": "mechanical_breakdown photo 1 \u2014 Boston",
+      "exif_datetime": "2026-07-13T16:00:00",
+      "filename": "mechanical_breakdown-1.jpg",
+      "relative_path": "images/mechanical_breakdown-1.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Transmission failed on the highway near Boston. Bumper is unmarked. Insured says they 'must have hit something.'",
+    "incident_date": "2026-07-13",
+    "incident_type": "other",
+    "location": {
+      "city": "Boston",
+      "postal_code": "02108",
+      "state": "MA",
+      "street_address": "5902 Pine Ave"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-07-17",
+    "third_party_involved": false,
+    "vehicle": {
+      "license_plate": "2APX540",
+      "make": "Chevrolet",
+      "model": "Equinox",
+      "odometer": 35028,
+      "prior_odometer": null,
+      "prior_odometer_date": null,
+      "vin": "4HV8WCR2DAPWPJTVX",
+      "year": 2022
+    }
+  },
+  "injected_fraud_signals": [],
+  "line_of_business": "auto",
+  "notes_style": "clean",
+  "peril": "mechanical_breakdown",
+  "policy_form": "PAP-CG-01",
+  "policy_number": "PA-2026-000046",
+  "recipe_key": "auto_mechanical",
+  "split": "dev"
+}

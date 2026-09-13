@@ -1,0 +1,74 @@
+{
+  "adjuster_notes": "First notice received for Cameron Okafor. Loss date 2026-05-11, sudden_pipe in Phoenix, AZ. Supply line under the sink burst while the insured was home in Phoenix. Water stopped within an hour. No third party is named. Claimed amount $9811.00. Photos appear consistent with the stated peril pending a closer desk review.",
+  "claim_id": "235c4e8d-334d-59c1-aa32-d423b02f2fdc",
+  "claimant": {
+    "date_of_birth": "1965-09-26",
+    "email": "cameron.okafor.16@example.test",
+    "full_name": "Cameron Okafor",
+    "phone": "632-555-4006"
+  },
+  "claimed_amount": {
+    "amount": "9811.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "ground_truth": {
+    "coverage_status": "partially_covered",
+    "expected_routing": "human_review",
+    "fraud_label": "fraud",
+    "is_fraud": true,
+    "rationale": "Coverage label partially_covered follows specimen wording for peril 'sudden_pipe'. Fraud label is positive because injected signals shared_phone, shared_entity.",
+    "severity_band": "moderate",
+    "severity_score": 0.48
+  },
+  "image_captions": [
+    "sudden_pipe photo 1 \u2014 Phoenix",
+    "sudden_pipe photo 2 \u2014 Phoenix"
+  ],
+  "images": [
+    {
+      "caption": "sudden_pipe photo 1 \u2014 Phoenix",
+      "exif_datetime": "2026-05-11T09:00:00",
+      "filename": "sudden_pipe-1.jpg",
+      "relative_path": "images/sudden_pipe-1.jpg"
+    },
+    {
+      "caption": "sudden_pipe photo 2 \u2014 Phoenix",
+      "exif_datetime": "2026-05-11T09:00:00",
+      "filename": "sudden_pipe-2.jpg",
+      "relative_path": "images/sudden_pipe-2.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Supply line under the sink burst while the insured was home in Phoenix. Water stopped within an hour.",
+    "incident_date": "2026-05-11",
+    "incident_type": "property_water",
+    "location": {
+      "city": "Phoenix",
+      "postal_code": "85004",
+      "state": "AZ",
+      "street_address": "3328 Oak Ct"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-05-11",
+    "third_party_involved": false,
+    "vehicle": null
+  },
+  "injected_fraud_signals": [
+    "shared_phone",
+    "shared_entity"
+  ],
+  "line_of_business": "home",
+  "notes_style": "clean",
+  "peril": "sudden_pipe",
+  "policy_form": "HO3-CG-01",
+  "policy_number": "HO-2026-000016",
+  "recipe_key": "home_pipe",
+  "split": "eval"
+}

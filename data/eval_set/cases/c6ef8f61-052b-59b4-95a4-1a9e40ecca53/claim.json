@@ -1,0 +1,89 @@
+{
+  "adjuster_notes": "First notice received for Harper Vargas. Loss date 2026-05-01, collision in Denver, CO. Low-to-moderate speed impact in Denver. Another driver is identified. Visible bumper and lamp damage. A third party is involved; request the police report before settlement. Claimed amount $5408.00. Photos appear consistent with the stated peril pending a closer desk review.",
+  "claim_id": "c6ef8f61-052b-59b4-95a4-1a9e40ecca53",
+  "claimant": {
+    "date_of_birth": "1978-11-07",
+    "email": "harper.vargas.28@example.test",
+    "full_name": "Harper Vargas",
+    "phone": "957-555-2625"
+  },
+  "claimed_amount": {
+    "amount": "5408.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "ground_truth": {
+    "coverage_status": "covered",
+    "expected_routing": "human_review",
+    "fraud_label": "fraud",
+    "is_fraud": true,
+    "rationale": "Coverage label covered follows specimen wording for peril 'collision'. Fraud label is positive because injected signals duplicate_vin.",
+    "severity_band": "moderate",
+    "severity_score": 0.48
+  },
+  "image_captions": [
+    "collision photo 1 \u2014 Denver",
+    "collision photo 2 \u2014 Denver",
+    "collision photo 3 \u2014 Denver"
+  ],
+  "images": [
+    {
+      "caption": "collision photo 1 \u2014 Denver",
+      "exif_datetime": "2026-05-01T17:00:00",
+      "filename": "collision-1.jpg",
+      "relative_path": "images/collision-1.jpg"
+    },
+    {
+      "caption": "collision photo 2 \u2014 Denver",
+      "exif_datetime": "2026-05-01T17:00:00",
+      "filename": "collision-2.jpg",
+      "relative_path": "images/collision-2.jpg"
+    },
+    {
+      "caption": "collision photo 3 \u2014 Denver",
+      "exif_datetime": "2026-05-01T17:00:00",
+      "filename": "collision-3.jpg",
+      "relative_path": "images/collision-3.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Low-to-moderate speed impact in Denver. Another driver is identified. Visible bumper and lamp damage.",
+    "incident_date": "2026-05-01",
+    "incident_type": "auto_collision",
+    "location": {
+      "city": "Denver",
+      "postal_code": "80203",
+      "state": "CO",
+      "street_address": "4435 Pine Ave"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-05-03",
+    "third_party_involved": true,
+    "vehicle": {
+      "license_plate": "8OJS539",
+      "make": "Honda",
+      "model": "Civic",
+      "odometer": 52026,
+      "prior_odometer": null,
+      "prior_odometer_date": null,
+      "vin": "XK2DEG0D9PCF43ESF",
+      "year": 2018
+    }
+  },
+  "injected_fraud_signals": [
+    "duplicate_vin"
+  ],
+  "line_of_business": "auto",
+  "notes_style": "clean",
+  "peril": "collision",
+  "policy_form": "PAP-CG-01",
+  "policy_number": "PA-2026-000028",
+  "recipe_key": "auto_collision",
+  "split": "eval"
+}

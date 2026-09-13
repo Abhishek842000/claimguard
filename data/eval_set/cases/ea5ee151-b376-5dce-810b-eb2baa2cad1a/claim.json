@@ -1,0 +1,71 @@
+{
+  "adjuster_notes": "Insured Quinn Kowalski reports a sudden_pipe loss on 2026-06-14 in San Francisco. Notes from the first call said the loss was 2026-06-12 and that there was no third party; the FNOL form lists third_party_involved=False. One note says airbags did not deploy; another says they did. Need a recorded statement before we lean on the photos.",
+  "claim_id": "ea5ee151-b376-5dce-810b-eb2baa2cad1a",
+  "claimant": {
+    "date_of_birth": "1996-12-15",
+    "email": "quinn.kowalski.41@example.test",
+    "full_name": "Quinn Kowalski",
+    "phone": "636-555-2768"
+  },
+  "claimed_amount": {
+    "amount": "4496.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "ground_truth": {
+    "coverage_status": "partially_covered",
+    "expected_routing": "human_review",
+    "fraud_label": "legitimate",
+    "is_fraud": false,
+    "rationale": "Coverage label partially_covered follows specimen wording for peril 'sudden_pipe'. No injected fraud signals.",
+    "severity_band": "moderate",
+    "severity_score": 0.48
+  },
+  "image_captions": [
+    "sudden_pipe photo 1 \u2014 San Francisco",
+    "sudden_pipe photo 2 \u2014 San Francisco"
+  ],
+  "images": [
+    {
+      "caption": "sudden_pipe photo 1 \u2014 San Francisco",
+      "exif_datetime": "2026-06-14T10:00:00",
+      "filename": "sudden_pipe-1.jpg",
+      "relative_path": "images/sudden_pipe-1.jpg"
+    },
+    {
+      "caption": "sudden_pipe photo 2 \u2014 San Francisco",
+      "exif_datetime": "2026-06-14T10:00:00",
+      "filename": "sudden_pipe-2.jpg",
+      "relative_path": "images/sudden_pipe-2.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Supply line under the sink burst while the insured was home in San Francisco. Water stopped within an hour.",
+    "incident_date": "2026-06-14",
+    "incident_type": "property_water",
+    "location": {
+      "city": "San Francisco",
+      "postal_code": "94103",
+      "state": "CA",
+      "street_address": "1304 Pine Ave"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-06-14",
+    "third_party_involved": false,
+    "vehicle": null
+  },
+  "injected_fraud_signals": [],
+  "line_of_business": "home",
+  "notes_style": "contradictory",
+  "peril": "sudden_pipe",
+  "policy_form": "HO3-CG-01",
+  "policy_number": "HO-2026-000041",
+  "recipe_key": "home_pipe",
+  "split": "eval"
+}

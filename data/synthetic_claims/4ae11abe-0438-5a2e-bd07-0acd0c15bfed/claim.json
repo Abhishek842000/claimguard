@@ -1,0 +1,62 @@
+{
+  "adjuster_notes": "FNOL mob. insd Avery. theft @ Nashville 7/29. amt asked 4364.00. no 3p. photos 2 recvd. f/u est.",
+  "claim_id": "4ae11abe-0438-5a2e-bd07-0acd0c15bfed",
+  "claimant": {
+    "date_of_birth": "1977-07-11",
+    "email": "avery.singh.14@example.test",
+    "full_name": "Avery Singh",
+    "phone": "428-555-1387"
+  },
+  "claimed_amount": {
+    "amount": "4364.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "image_captions": [
+    "theft photo 1 \u2014 Nashville",
+    "theft photo 2 \u2014 Nashville"
+  ],
+  "images": [
+    {
+      "caption": "theft photo 1 \u2014 Nashville",
+      "exif_datetime": "2026-07-29T12:00:00",
+      "filename": "theft-1.jpg",
+      "relative_path": "images/theft-1.jpg"
+    },
+    {
+      "caption": "theft photo 2 \u2014 Nashville",
+      "exif_datetime": "2026-07-29T12:00:00",
+      "filename": "theft-2.jpg",
+      "relative_path": "images/theft-2.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Forced rear-door entry in Nashville. Electronics and jewelry missing.",
+    "incident_date": "2026-07-29",
+    "incident_type": "property_theft",
+    "location": {
+      "city": "Nashville",
+      "postal_code": "37203",
+      "state": "TN",
+      "street_address": "4664 Pine Ave"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-07-31",
+    "third_party_involved": false,
+    "vehicle": null
+  },
+  "injected_fraud_signals": [],
+  "line_of_business": "home",
+  "notes_style": "messy",
+  "peril": "theft",
+  "policy_form": "HO3-CG-01",
+  "policy_number": "HO-2026-000014",
+  "recipe_key": "home_theft",
+  "split": "dev"
+}
