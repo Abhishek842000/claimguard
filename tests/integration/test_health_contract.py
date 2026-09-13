@@ -11,5 +11,5 @@ from fastapi.testclient import TestClient
 
 def test_claims_routes_are_registered() -> None:
     client = TestClient(create_app(Settings(app_env="test")))
-    response = client.post("/v1/claims")
+    response = client.post("/v1/claims", headers={"X-API-Key": "claimguard-local"})
     assert response.status_code == 422
