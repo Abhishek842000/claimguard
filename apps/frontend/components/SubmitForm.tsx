@@ -1,12 +1,14 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 import type { SampleClaim } from "@/lib/api";
 import { submitSample, uploadClaim } from "@/lib/api";
+import { fileKey, mergeSelectedFiles } from "@/lib/files";
 
 export function SubmitForm({ samples }: { samples: SampleClaim[] }) {
   const router = useRouter();
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const [sourceDir, setSourceDir] = useState(samples[0]?.source_dir ?? "");
   const [notes, setNotes] = useState("");
   const [files, setFiles] = useState<File[]>([]);
@@ -18,6 +20,17 @@ export function SubmitForm({ samples }: { samples: SampleClaim[] }) {
       setSourceDir(samples[0].source_dir);
     }
   }, [samples, sourceDir]);
+
+  function onPickFiles(event: FormEvent<HTMLInputElement>) {
+    const picked = Array.from(event.currentTarget.files ?? []);
+    setFiles((current) => mergeSelectedFiles(current, picked));
+    // Reset so picking again (or the same file) still fires change and appends.
+    event.currentTarget.value = "";
+  }
+
+  function removeFile(key: string) {
+    setFiles((current) => current.filter((file) => fileKey(file) !== key));
+  }
 
   async function onSample(event: FormEvent) {
     event.preventDefault();
@@ -69,13 +82,36 @@ export function SubmitForm({ samples }: { samples: SampleClaim[] }) {
       <form className="stack" onSubmit={onUpload}>
         <label>
           Upload docs / images
+          <span className="hint">
+            Pick one or more files, then open the picker again to add more. Hold
+            Cmd (macOS) or Ctrl to select several in one dialog. Files stay in
+            the list until you remove them or submit.
+          </span>
           <input
+            ref={fileInputRef}
             type="file"
             multiple
             accept=".pdf,.txt,.md,.jpg,.jpeg,.png,.webp"
-            onChange={(event) => setFiles(Array.from(event.target.files ?? []))}
+            onChange={onPickFiles}
           />
         </label>
+        {files.length > 0 ? (
+          <ul className="file-list">
+            {files.map((file) => (
+              <li key={fileKey(file)}>
+                <span>
+                  {file.name}{" "}
+                  <span className="hint">({formatBytes(file.size)})</span>
+                </span>
+                <button type="button" className="ghost" onClick={() => removeFile(fileKey(file))}>
+                  Remove
+                </button>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="hint">No files selected yet.</p>
+        )}
         <label>
           Adjuster notes
           <textarea
@@ -92,4 +128,14 @@ export function SubmitForm({ samples }: { samples: SampleClaim[] }) {
       {error ? <p className="error">{error}</p> : null}
     </section>
   );
+}
+
+function formatBytes(size: number): string {
+  if (size < 1024) {
+    return `${size} B`;
+  }
+  if (size < 1024 * 1024) {
+    return `${Math.round(size / 1024)} KB`;
+  }
+  return `${(size / (1024 * 1024)).toFixed(1)} MB`;
 }

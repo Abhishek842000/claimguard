@@ -111,7 +111,10 @@ app proxies through `/api/claimguard/*` so the key is not in client JS.
 ### Demo
 
 1. Open http://localhost:3001
-2. Pick `PA-2026-000039 · hail` (or upload a PDF / photo + notes)
+2. Pick `PA-2026-000039 · hail`, or upload a PDF / photos + notes (each file-picker
+   open **appends**; submit once). For camera photos use the Phoenix FNOL at
+   `data/synthetic_claims/09d919dc-2168-544f-8ec0-4a0f018c8ef6/documents/fnol-claim-form.pdf`
+   — a Denver form will not fire the weather-mismatch demo.
 3. Watch status move to `needs_review` or `auto_resolved`
 4. Open the claim: verdict + a step-by-step agent timeline (not a JSON dump)
 5. Cost panel on the home page shows running total, avg/claim, and by-agent spend

@@ -19,6 +19,8 @@ from starlette.middleware.base import BaseHTTPMiddleware, RequestResponseEndpoin
 from starlette.responses import Response
 from starlette.types import ASGIApp
 
+_WRITE_METHODS = frozenset({"POST", "PUT", "PATCH", "DELETE"})
+
 
 class SlidingWindowLimiter:
     def __init__(self) -> None:
@@ -55,11 +57,21 @@ class ApiKeyRateLimitMiddleware(BaseHTTPMiddleware):
                 status_code=401,
                 content={"detail": "Invalid or missing API key."},
             )
-        if not self.limiter.allow(presented, settings.rate_limit_per_minute):
-            return JSONResponse(
-                status_code=429,
-                content={"detail": "Rate limit exceeded."},
-            )
+        # GETs are dashboard polls (list/metrics/detail). Counting them in the
+        # same window as POST /upload made a tab left open for a minute block
+        # the demo. Key still required on GET; only writes share the tight cap.
+        if request.method in _WRITE_METHODS:
+            if not self.limiter.allow(presented, settings.rate_limit_per_minute):
+                return JSONResponse(
+                    status_code=429,
+                    headers={"Retry-After": "60"},
+                    content={
+                        "detail": (
+                            "Rate limit exceeded. Wait 60 seconds, or raise "
+                            "RATE_LIMIT_PER_MINUTE. List/metrics polls do not count."
+                        ),
+                    },
+                )
         return await call_next(request)
 
 

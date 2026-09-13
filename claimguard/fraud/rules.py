@@ -90,11 +90,47 @@ def evaluate_fraud_rules(
                     detail=f"Shared with {len(peers)} other claim(s) in the book of business.",
                 )
             )
+    note_hit = _notes_location_mismatch(intake)
+    if note_hit is not None:
+        hits.append(note_hit)
     uris = image_uris if image_uris is not None else [image.storage_uri for image in intake.images]
     exif_hit = _exif_mismatch(intake, uris)
     if exif_hit is not None:
         hits.append(exif_hit)
     return hits
+
+
+# Cities we can reliably spot in free-text notes. Phoenix is intentionally
+# included even though it has no NOAA fixture row (that is the mismatch demo).
+_KNOWN_CITIES = (
+    "san francisco",
+    "phoenix",
+    "denver",
+    "austin",
+    "chicago",
+    "seattle",
+    "atlanta",
+    "nashville",
+    "boston",
+    "miami",
+)
+
+
+def _notes_location_mismatch(intake: ClaimIntake) -> FraudRuleHit | None:
+    location = intake.incident.location
+    notes = (intake.adjuster_notes or "").lower()
+    if location is None or not notes:
+        return None
+    mentioned = [city for city in _KNOWN_CITIES if city in notes]
+    form_city = location.city.lower()
+    if not mentioned or form_city in mentioned:
+        return None
+    return FraudRuleHit(
+        rule_id="FR-NOTE-LOCATION-MISMATCH",
+        rule_name="Adjuster notes name a different city than the FNOL form",
+        severity="high",
+        detail=f"Form location is {location.city}; notes mention {', '.join(mentioned)}.",
+    )
 
 
 def _exif_mismatch(intake: ClaimIntake, image_uris: list[str]) -> FraudRuleHit | None:

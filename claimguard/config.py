@@ -64,7 +64,7 @@ class Settings(BaseSettings):
     rate_limit_per_minute: int = Field(
         default=120,
         ge=0,
-        description="Sliding-window cap per API key. 0 disables the limiter.",
+        description="Sliding-window cap per API key on POST/PUT/PATCH/DELETE. GETs are polls and do not count. 0 disables the limiter.",
     )
 
     routing_confidence_threshold: float = Field(
