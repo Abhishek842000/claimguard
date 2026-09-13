@@ -29,6 +29,20 @@ def _weather_intake() -> ClaimIntake:
     )
 
 
+def test_notes_city_mismatch_fires_when_form_and_notes_disagree() -> None:
+    intake = _weather_intake()
+    intake = intake.model_copy(
+        update={
+            "adjuster_notes": "Golf-ball hail in Phoenix, AZ on 2026-06-12.",
+            "incident": intake.incident.model_copy(
+                update={"location": GeoLocation(city="Denver", state="CO")}
+            ),
+        }
+    )
+    hits = evaluate_fraud_rules(intake)
+    assert any(hit.rule_id == "FR-NOTE-LOCATION-MISMATCH" for hit in hits)
+
+
 def test_weather_mismatch_rule_fires_for_phoenix_hail() -> None:
     hits = evaluate_fraud_rules(_weather_intake())
     assert any(hit.rule_id == "FR-WEATHER-MISMATCH" for hit in hits)
