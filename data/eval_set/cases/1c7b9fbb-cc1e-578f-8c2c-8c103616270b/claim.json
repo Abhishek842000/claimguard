@@ -1,0 +1,76 @@
+{
+  "adjuster_notes": "First notice received for Logan Okoye. Loss date 2026-08-07, mechanical_breakdown in Boston, MA. Transmission failed on the highway near Boston. Bumper is unmarked. Insured says they 'must have hit something.' No third party is named. Claimed amount $2645.00. Photos appear consistent with the stated peril pending a closer desk review.",
+  "claim_id": "1c7b9fbb-cc1e-578f-8c2c-8c103616270b",
+  "claimant": {
+    "date_of_birth": "1976-03-06",
+    "email": "logan.okoye.35@example.test",
+    "full_name": "Logan Okoye",
+    "phone": "743-555-7751"
+  },
+  "claimed_amount": {
+    "amount": "2645.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "exif_offset_days": -21,
+  "ground_truth": {
+    "coverage_status": "excluded",
+    "expected_routing": "human_review",
+    "fraud_label": "fraud",
+    "is_fraud": true,
+    "rationale": "Coverage label excluded follows specimen wording for peril 'mechanical_breakdown'. Fraud label is positive because injected signals photo_exif_mismatch.",
+    "severity_band": "low",
+    "severity_score": 0.28
+  },
+  "image_captions": [
+    "mechanical_breakdown photo 1 \u2014 Boston"
+  ],
+  "images": [
+    {
+      "caption": "mechanical_breakdown photo 1 \u2014 Boston",
+      "exif_datetime": "2026-07-17T09:00:00",
+      "filename": "mechanical_breakdown-1.jpg",
+      "relative_path": "images/mechanical_breakdown-1.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Transmission failed on the highway near Boston. Bumper is unmarked. Insured says they 'must have hit something.'",
+    "incident_date": "2026-08-07",
+    "incident_type": "other",
+    "location": {
+      "city": "Boston",
+      "postal_code": "02108",
+      "state": "MA",
+      "street_address": "1393 Riverway"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-08-08",
+    "third_party_involved": false,
+    "vehicle": {
+      "license_plate": "1JLL541",
+      "make": "Nissan",
+      "model": "Altima",
+      "odometer": 31080,
+      "prior_odometer": null,
+      "prior_odometer_date": null,
+      "vin": "X8CESVRF4GG5LWBCX",
+      "year": 2016
+    }
+  },
+  "injected_fraud_signals": [
+    "photo_exif_mismatch"
+  ],
+  "line_of_business": "auto",
+  "notes_style": "clean",
+  "peril": "mechanical_breakdown",
+  "policy_form": "PAP-CG-01",
+  "policy_number": "PA-2026-000035",
+  "recipe_key": "auto_mechanical",
+  "split": "eval"
+}

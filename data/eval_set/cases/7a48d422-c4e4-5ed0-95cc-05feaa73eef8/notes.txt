@@ -1,0 +1,1 @@
+Insured Reese Kowalski reports a fire loss on 2026-07-16 in Miami. Notes from the first call said the loss was 2026-07-14 and that there was no third party; the FNOL form lists third_party_involved=False. One note says airbags did not deploy; another says they did. Need a recorded statement before we lean on the photos.

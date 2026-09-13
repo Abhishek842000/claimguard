@@ -1,0 +1,62 @@
+{
+  "adjuster_notes": "First notice received for Jordan Okafor. Loss date 2026-05-24, flood in San Francisco, CA. Surface water from the street entered the first floor in San Francisco after heavy rain. No third party is named. Claimed amount $36603.00. Photos appear consistent with the stated peril pending a closer desk review.",
+  "claim_id": "cb92f114-38ae-5423-9cdc-8a98b3efba31",
+  "claimant": {
+    "date_of_birth": "1968-05-20",
+    "email": "jordan.okafor.43@example.test",
+    "full_name": "Jordan Okafor",
+    "phone": "562-555-7929"
+  },
+  "claimed_amount": {
+    "amount": "36603.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "image_captions": [
+    "flood photo 1 \u2014 San Francisco",
+    "flood photo 2 \u2014 San Francisco"
+  ],
+  "images": [
+    {
+      "caption": "flood photo 1 \u2014 San Francisco",
+      "exif_datetime": "2026-05-24T15:00:00",
+      "filename": "flood-1.jpg",
+      "relative_path": "images/flood-1.jpg"
+    },
+    {
+      "caption": "flood photo 2 \u2014 San Francisco",
+      "exif_datetime": "2026-05-24T15:00:00",
+      "filename": "flood-2.jpg",
+      "relative_path": "images/flood-2.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Surface water from the street entered the first floor in San Francisco after heavy rain.",
+    "incident_date": "2026-05-24",
+    "incident_type": "property_water",
+    "location": {
+      "city": "San Francisco",
+      "postal_code": "94103",
+      "state": "CA",
+      "street_address": "5219 Oak Ct"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-05-28",
+    "third_party_involved": false,
+    "vehicle": null
+  },
+  "injected_fraud_signals": [],
+  "line_of_business": "home",
+  "notes_style": "clean",
+  "peril": "flood",
+  "policy_form": "HO3-CG-01",
+  "policy_number": "HO-2026-000043",
+  "recipe_key": "home_flood",
+  "split": "dev"
+}

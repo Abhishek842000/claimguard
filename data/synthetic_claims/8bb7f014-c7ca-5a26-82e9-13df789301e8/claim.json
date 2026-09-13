@@ -1,0 +1,69 @@
+{
+  "adjuster_notes": "First notice received for Riley Singh. Loss date 2026-02-27, theft in Nashville, TN. Forced rear-door entry in Nashville. Electronics and jewelry missing. No third party is named. Claimed amount $4269.00. Photos appear consistent with the stated peril pending a closer desk review.",
+  "claim_id": "8bb7f014-c7ca-5a26-82e9-13df789301e8",
+  "claimant": {
+    "date_of_birth": "1979-01-03",
+    "email": "riley.singh.7@example.test",
+    "full_name": "Riley Singh",
+    "phone": "767-555-4770"
+  },
+  "claimed_amount": {
+    "amount": "4269.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "image_captions": [
+    "theft photo 1 \u2014 Nashville",
+    "theft photo 2 \u2014 Nashville",
+    "theft photo 3 \u2014 Nashville"
+  ],
+  "images": [
+    {
+      "caption": "theft photo 1 \u2014 Nashville",
+      "exif_datetime": "2026-02-27T14:00:00",
+      "filename": "theft-1.jpg",
+      "relative_path": "images/theft-1.jpg"
+    },
+    {
+      "caption": "theft photo 2 \u2014 Nashville",
+      "exif_datetime": "2026-02-27T14:00:00",
+      "filename": "theft-2.jpg",
+      "relative_path": "images/theft-2.jpg"
+    },
+    {
+      "caption": "theft photo 3 \u2014 Nashville",
+      "exif_datetime": "2026-02-27T14:00:00",
+      "filename": "theft-3.jpg",
+      "relative_path": "images/theft-3.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Forced rear-door entry in Nashville. Electronics and jewelry missing.",
+    "incident_date": "2026-02-27",
+    "incident_type": "property_theft",
+    "location": {
+      "city": "Nashville",
+      "postal_code": "37203",
+      "state": "TN",
+      "street_address": "1064 Highland Dr"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-02-27",
+    "third_party_involved": false,
+    "vehicle": null
+  },
+  "injected_fraud_signals": [],
+  "line_of_business": "home",
+  "notes_style": "clean",
+  "peril": "theft",
+  "policy_form": "HO3-CG-01",
+  "policy_number": "HO-2026-000007",
+  "recipe_key": "home_theft",
+  "split": "dev"
+}

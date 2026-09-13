@@ -1,0 +1,71 @@
+{
+  "adjuster_notes": "First notice received for Harper Okafor. Loss date 2026-07-11, sudden_pipe in Chicago, IL. Supply line under the sink burst while the insured was home in Chicago. Water stopped within an hour. No third party is named. Claimed amount $5376.00. Photos appear consistent with the stated peril pending a closer desk review.",
+  "claim_id": "94ca5362-4036-5a67-b450-c4be4528ef02",
+  "claimant": {
+    "date_of_birth": "1984-10-22",
+    "email": "harper.okafor.23@example.test",
+    "full_name": "Harper Okafor",
+    "phone": "310-555-1420"
+  },
+  "claimed_amount": {
+    "amount": "5376.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "ground_truth": {
+    "coverage_status": "partially_covered",
+    "expected_routing": "human_review",
+    "fraud_label": "legitimate",
+    "is_fraud": false,
+    "rationale": "Coverage label partially_covered follows specimen wording for peril 'sudden_pipe'. No injected fraud signals.",
+    "severity_band": "moderate",
+    "severity_score": 0.48
+  },
+  "image_captions": [
+    "sudden_pipe photo 1 \u2014 Chicago",
+    "sudden_pipe photo 2 \u2014 Chicago"
+  ],
+  "images": [
+    {
+      "caption": "sudden_pipe photo 1 \u2014 Chicago",
+      "exif_datetime": "2026-07-11T11:00:00",
+      "filename": "sudden_pipe-1.jpg",
+      "relative_path": "images/sudden_pipe-1.jpg"
+    },
+    {
+      "caption": "sudden_pipe photo 2 \u2014 Chicago",
+      "exif_datetime": "2026-07-11T11:00:00",
+      "filename": "sudden_pipe-2.jpg",
+      "relative_path": "images/sudden_pipe-2.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Supply line under the sink burst while the insured was home in Chicago. Water stopped within an hour.",
+    "incident_date": "2026-07-11",
+    "incident_type": "property_water",
+    "location": {
+      "city": "Chicago",
+      "postal_code": "60611",
+      "state": "IL",
+      "street_address": "6249 Riverway"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-07-19",
+    "third_party_involved": false,
+    "vehicle": null
+  },
+  "injected_fraud_signals": [],
+  "line_of_business": "home",
+  "notes_style": "clean",
+  "peril": "sudden_pipe",
+  "policy_form": "HO3-CG-01",
+  "policy_number": "HO-2026-000023",
+  "recipe_key": "home_pipe",
+  "split": "eval"
+}

@@ -1,0 +1,64 @@
+{
+  "adjuster_notes": "First notice received for Jordan Patel. Loss date 2026-03-28, collision in Nashville, TN. Low-to-moderate speed impact in Nashville. No other vehicle is named. Visible bumper and lamp damage. No third party is named. Claimed amount $1228.00. Photos appear consistent with the stated peril pending a closer desk review.",
+  "claim_id": "d3608896-df52-590b-9c9f-a6a37abbff4e",
+  "claimant": {
+    "date_of_birth": "1999-01-12",
+    "email": "jordan.patel.21@example.test",
+    "full_name": "Jordan Patel",
+    "phone": "681-555-1317"
+  },
+  "claimed_amount": {
+    "amount": "1228.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "image_captions": [
+    "collision photo 1 \u2014 Nashville"
+  ],
+  "images": [
+    {
+      "caption": "collision photo 1 \u2014 Nashville",
+      "exif_datetime": "2026-03-28T10:00:00",
+      "filename": "collision-1.jpg",
+      "relative_path": "images/collision-1.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Low-to-moderate speed impact in Nashville. No other vehicle is named. Visible bumper and lamp damage.",
+    "incident_date": "2026-03-28",
+    "incident_type": "auto_collision",
+    "location": {
+      "city": "Nashville",
+      "postal_code": "37203",
+      "state": "TN",
+      "street_address": "3773 Pine Ave"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-04-05",
+    "third_party_involved": false,
+    "vehicle": {
+      "license_plate": "7IYN358",
+      "make": "Kia",
+      "model": "Sportage",
+      "odometer": 121433,
+      "prior_odometer": null,
+      "prior_odometer_date": null,
+      "vin": "JB2BF4J6MDT1XP6XY",
+      "year": 2023
+    }
+  },
+  "injected_fraud_signals": [],
+  "line_of_business": "auto",
+  "notes_style": "clean",
+  "peril": "collision",
+  "policy_form": "PAP-CG-01",
+  "policy_number": "PA-2026-000021",
+  "recipe_key": "auto_collision_low",
+  "split": "dev"
+}

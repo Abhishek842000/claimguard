@@ -1,0 +1,71 @@
+{
+  "adjuster_notes": "FNOL mob. insd Rowan. hail @ Denver 7/4. amt asked 4544.00. no 3p. photos 2 recvd. f/u est.",
+  "claim_id": "b1b85ea4-755f-534a-8dcd-78fa96b7a7ed",
+  "claimant": {
+    "date_of_birth": "1983-12-28",
+    "email": "rowan.okafor.37@example.test",
+    "full_name": "Rowan Okafor",
+    "phone": "463-555-8894"
+  },
+  "claimed_amount": {
+    "amount": "4544.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "image_captions": [
+    "hail photo 1 \u2014 Denver",
+    "hail photo 2 \u2014 Denver"
+  ],
+  "images": [
+    {
+      "caption": "hail photo 1 \u2014 Denver",
+      "exif_datetime": "2026-07-04T12:00:00",
+      "filename": "hail-1.jpg",
+      "relative_path": "images/hail-1.jpg"
+    },
+    {
+      "caption": "hail photo 2 \u2014 Denver",
+      "exif_datetime": "2026-07-04T12:00:00",
+      "filename": "hail-2.jpg",
+      "relative_path": "images/hail-2.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Hood and roof show circular dings after a hail cell moved through Denver.",
+    "incident_date": "2026-07-04",
+    "incident_type": "auto_weather",
+    "location": {
+      "city": "Denver",
+      "postal_code": "80203",
+      "state": "CO",
+      "street_address": "5649 Pine Ave"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-07-06",
+    "third_party_involved": false,
+    "vehicle": {
+      "license_plate": "4EZR997",
+      "make": "Hyundai",
+      "model": "Tucson",
+      "odometer": 139335,
+      "prior_odometer": null,
+      "prior_odometer_date": null,
+      "vin": "ZRNTJGCW5C0JFVX3M",
+      "year": 2021
+    }
+  },
+  "injected_fraud_signals": [],
+  "line_of_business": "auto",
+  "notes_style": "messy",
+  "peril": "hail",
+  "policy_form": "PAP-CG-01",
+  "policy_number": "PA-2026-000037",
+  "recipe_key": "auto_hail",
+  "split": "dev"
+}

@@ -1,0 +1,71 @@
+{
+  "adjuster_notes": "Insured Finley Berg reports a hail loss on 2026-05-18 in Austin. Notes from the first call said the loss was 2026-05-16 and that there was no third party; the FNOL form lists third_party_involved=False. One note says airbags did not deploy; another says they did. Need a recorded statement before we lean on the photos.",
+  "claim_id": "d7c52ba0-e6a5-52eb-aaa2-4bcf992f7b96",
+  "claimant": {
+    "date_of_birth": "1984-07-22",
+    "email": "finley.berg.6@example.test",
+    "full_name": "Finley Berg",
+    "phone": "752-555-4295"
+  },
+  "claimed_amount": {
+    "amount": "6358.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "image_captions": [
+    "hail photo 1 \u2014 Austin",
+    "hail photo 2 \u2014 Austin"
+  ],
+  "images": [
+    {
+      "caption": "hail photo 1 \u2014 Austin",
+      "exif_datetime": "2026-05-18T16:00:00",
+      "filename": "hail-1.jpg",
+      "relative_path": "images/hail-1.jpg"
+    },
+    {
+      "caption": "hail photo 2 \u2014 Austin",
+      "exif_datetime": "2026-05-18T16:00:00",
+      "filename": "hail-2.jpg",
+      "relative_path": "images/hail-2.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Hood and roof show circular dings after a hail cell moved through Austin.",
+    "incident_date": "2026-05-18",
+    "incident_type": "auto_weather",
+    "location": {
+      "city": "Austin",
+      "postal_code": "78701",
+      "state": "TX",
+      "street_address": "6218 Lakeshore Dr"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-05-19",
+    "third_party_involved": false,
+    "vehicle": {
+      "license_plate": "9YEE775",
+      "make": "Hyundai",
+      "model": "Tucson",
+      "odometer": 74296,
+      "prior_odometer": null,
+      "prior_odometer_date": null,
+      "vin": "K0LAX8BH0WSDSFF8E",
+      "year": 2021
+    }
+  },
+  "injected_fraud_signals": [],
+  "line_of_business": "auto",
+  "notes_style": "contradictory",
+  "peril": "hail",
+  "policy_form": "PAP-CG-01",
+  "policy_number": "PA-2026-000006",
+  "recipe_key": "auto_hail",
+  "split": "dev"
+}

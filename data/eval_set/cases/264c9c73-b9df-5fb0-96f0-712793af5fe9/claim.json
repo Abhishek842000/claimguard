@@ -1,0 +1,80 @@
+{
+  "adjuster_notes": "FNOL mob. insd Jordan. collision @ Phoenix 4/18. amt asked 5815.00. 3p yes. need PR. photos 2 recvd. f/u est.",
+  "claim_id": "264c9c73-b9df-5fb0-96f0-712793af5fe9",
+  "claimant": {
+    "date_of_birth": "2000-01-17",
+    "email": "jordan.sullivan.25@example.test",
+    "full_name": "Jordan Sullivan",
+    "phone": "486-555-5526"
+  },
+  "claimed_amount": {
+    "amount": "5815.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "ground_truth": {
+    "coverage_status": "covered",
+    "expected_routing": "human_review",
+    "fraud_label": "legitimate",
+    "is_fraud": false,
+    "rationale": "Coverage label covered follows specimen wording for peril 'collision'. No injected fraud signals.",
+    "severity_band": "moderate",
+    "severity_score": 0.48
+  },
+  "image_captions": [
+    "collision photo 1 \u2014 Phoenix",
+    "collision photo 2 \u2014 Phoenix"
+  ],
+  "images": [
+    {
+      "caption": "collision photo 1 \u2014 Phoenix",
+      "exif_datetime": "2026-04-18T09:00:00",
+      "filename": "collision-1.jpg",
+      "relative_path": "images/collision-1.jpg"
+    },
+    {
+      "caption": "collision photo 2 \u2014 Phoenix",
+      "exif_datetime": "2026-04-18T09:00:00",
+      "filename": "collision-2.jpg",
+      "relative_path": "images/collision-2.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Low-to-moderate speed impact in Phoenix. Another driver is identified. Visible bumper and lamp damage.",
+    "incident_date": "2026-04-18",
+    "incident_type": "auto_collision",
+    "location": {
+      "city": "Phoenix",
+      "postal_code": "85004",
+      "state": "AZ",
+      "street_address": "3230 Pine Ave"
+    },
+    "police_report_number": "AZ-936587",
+    "reported_date": "2026-05-23",
+    "third_party_involved": true,
+    "vehicle": {
+      "license_plate": "6APK286",
+      "make": "Chevrolet",
+      "model": "Equinox",
+      "odometer": 75904,
+      "prior_odometer": null,
+      "prior_odometer_date": null,
+      "vin": "6K4MU764UXSFU5S61",
+      "year": 2022
+    }
+  },
+  "injected_fraud_signals": [],
+  "line_of_business": "auto",
+  "notes_style": "messy",
+  "peril": "collision",
+  "policy_form": "PAP-CG-01",
+  "policy_number": "PA-2026-000025",
+  "recipe_key": "auto_collision",
+  "split": "eval"
+}

@@ -1,0 +1,71 @@
+{
+  "adjuster_notes": "First notice received for Quinn Singh. Loss date 2026-11-08, wind in Seattle, WA. Wind-thrown limb punctured the rear roof plane in Seattle. No third party is named. Claimed amount $7752.00. Photos appear consistent with the stated peril pending a closer desk review.",
+  "claim_id": "fbd34c1c-fb13-5a92-898a-70182bc18ef5",
+  "claimant": {
+    "date_of_birth": "2000-05-23",
+    "email": "quinn.singh.27@example.test",
+    "full_name": "Quinn Singh",
+    "phone": "246-555-1893"
+  },
+  "claimed_amount": {
+    "amount": "7752.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "ground_truth": {
+    "coverage_status": "covered",
+    "expected_routing": "auto_resolve",
+    "fraud_label": "legitimate",
+    "is_fraud": false,
+    "rationale": "Coverage label covered follows specimen wording for peril 'wind'. No injected fraud signals.",
+    "severity_band": "moderate",
+    "severity_score": 0.48
+  },
+  "image_captions": [
+    "wind photo 1 \u2014 Seattle",
+    "wind photo 2 \u2014 Seattle"
+  ],
+  "images": [
+    {
+      "caption": "wind photo 1 \u2014 Seattle",
+      "exif_datetime": "2026-11-08T16:00:00",
+      "filename": "wind-1.jpg",
+      "relative_path": "images/wind-1.jpg"
+    },
+    {
+      "caption": "wind photo 2 \u2014 Seattle",
+      "exif_datetime": "2026-11-08T16:00:00",
+      "filename": "wind-2.jpg",
+      "relative_path": "images/wind-2.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Wind-thrown limb punctured the rear roof plane in Seattle.",
+    "incident_date": "2026-11-08",
+    "incident_type": "property_weather",
+    "location": {
+      "city": "Seattle",
+      "postal_code": "98101",
+      "state": "WA",
+      "street_address": "2168 Lakeshore Dr"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-11-10",
+    "third_party_involved": false,
+    "vehicle": null
+  },
+  "injected_fraud_signals": [],
+  "line_of_business": "home",
+  "notes_style": "clean",
+  "peril": "wind",
+  "policy_form": "HO3-CG-01",
+  "policy_number": "HO-2026-000027",
+  "recipe_key": "home_wind",
+  "split": "eval"
+}

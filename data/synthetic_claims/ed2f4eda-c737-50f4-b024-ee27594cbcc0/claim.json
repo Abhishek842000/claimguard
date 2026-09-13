@@ -1,0 +1,66 @@
+{
+  "adjuster_notes": "First notice received for Morgan Moreau. Loss date 2026-07-21, collision in Boston, MA. Low-to-moderate speed impact in Boston. No other vehicle is named. Visible bumper and lamp damage. No third party is named. Claimed amount $18500.00. Photos appear consistent with the stated peril pending a closer desk review.",
+  "claim_id": "ed2f4eda-c737-50f4-b024-ee27594cbcc0",
+  "claimant": {
+    "date_of_birth": "1973-09-19",
+    "email": "morgan.moreau.33@example.test",
+    "full_name": "Morgan Moreau",
+    "phone": "707-555-1606"
+  },
+  "claimed_amount": {
+    "amount": "18500.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "image_captions": [
+    "collision photo 1 \u2014 Boston"
+  ],
+  "images": [
+    {
+      "caption": "collision photo 1 \u2014 Boston",
+      "exif_datetime": "2026-07-21T09:00:00",
+      "filename": "collision-1.jpg",
+      "relative_path": "images/collision-1.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Low-to-moderate speed impact in Boston. No other vehicle is named. Visible bumper and lamp damage.",
+    "incident_date": "2026-07-21",
+    "incident_type": "auto_collision",
+    "location": {
+      "city": "Boston",
+      "postal_code": "02108",
+      "state": "MA",
+      "street_address": "5539 Pine Ave"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-07-25",
+    "third_party_involved": false,
+    "vehicle": {
+      "license_plate": "8WZM495",
+      "make": "Subaru",
+      "model": "Outback",
+      "odometer": 98991,
+      "prior_odometer": null,
+      "prior_odometer_date": null,
+      "vin": "W8K57ZY16XNS1R3CX",
+      "year": 2017
+    }
+  },
+  "injected_fraud_signals": [
+    "inflated_estimate"
+  ],
+  "line_of_business": "auto",
+  "notes_style": "clean",
+  "peril": "collision",
+  "policy_form": "PAP-CG-01",
+  "policy_number": "PA-2026-000033",
+  "recipe_key": "auto_collision_low",
+  "split": "dev"
+}

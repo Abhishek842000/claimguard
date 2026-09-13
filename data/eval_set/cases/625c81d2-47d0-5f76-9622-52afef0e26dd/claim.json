@@ -1,0 +1,87 @@
+{
+  "adjuster_notes": "First notice received for Quinn Brennan. Loss date 2026-01-05, hail in San Francisco, CA. Hood and roof show circular dings after a hail cell moved through San Francisco. No third party is named. Claimed amount $2763.00. Photos appear consistent with the stated peril pending a closer desk review.",
+  "claim_id": "625c81d2-47d0-5f76-9622-52afef0e26dd",
+  "claimant": {
+    "date_of_birth": "1967-01-11",
+    "email": "quinn.brennan.12@example.test",
+    "full_name": "Quinn Brennan",
+    "phone": "633-555-5533"
+  },
+  "claimed_amount": {
+    "amount": "2763.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "ground_truth": {
+    "coverage_status": "covered",
+    "expected_routing": "auto_resolve",
+    "fraud_label": "legitimate",
+    "is_fraud": false,
+    "rationale": "Coverage label covered follows specimen wording for peril 'hail'. No injected fraud signals.",
+    "severity_band": "moderate",
+    "severity_score": 0.48
+  },
+  "image_captions": [
+    "hail photo 1 \u2014 San Francisco",
+    "hail photo 2 \u2014 San Francisco",
+    "hail photo 3 \u2014 San Francisco"
+  ],
+  "images": [
+    {
+      "caption": "hail photo 1 \u2014 San Francisco",
+      "exif_datetime": "2026-01-05T10:00:00",
+      "filename": "hail-1.jpg",
+      "relative_path": "images/hail-1.jpg"
+    },
+    {
+      "caption": "hail photo 2 \u2014 San Francisco",
+      "exif_datetime": "2026-01-05T10:00:00",
+      "filename": "hail-2.jpg",
+      "relative_path": "images/hail-2.jpg"
+    },
+    {
+      "caption": "hail photo 3 \u2014 San Francisco",
+      "exif_datetime": "2026-01-05T10:00:00",
+      "filename": "hail-3.jpg",
+      "relative_path": "images/hail-3.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Hood and roof show circular dings after a hail cell moved through San Francisco.",
+    "incident_date": "2026-01-05",
+    "incident_type": "auto_weather",
+    "location": {
+      "city": "San Francisco",
+      "postal_code": "94103",
+      "state": "CA",
+      "street_address": "2243 Summit Blvd"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-01-05",
+    "third_party_involved": false,
+    "vehicle": {
+      "license_plate": "4VUI617",
+      "make": "Hyundai",
+      "model": "Tucson",
+      "odometer": 76032,
+      "prior_odometer": null,
+      "prior_odometer_date": null,
+      "vin": "0VL5WAWGJTHGKUVPY",
+      "year": 2021
+    }
+  },
+  "injected_fraud_signals": [],
+  "line_of_business": "auto",
+  "notes_style": "clean",
+  "peril": "hail",
+  "policy_form": "PAP-CG-01",
+  "policy_number": "PA-2026-000012",
+  "recipe_key": "auto_hail",
+  "split": "eval"
+}

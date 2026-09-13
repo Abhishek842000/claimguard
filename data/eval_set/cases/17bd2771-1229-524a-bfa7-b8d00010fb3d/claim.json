@@ -1,0 +1,80 @@
+{
+  "adjuster_notes": "Insured Morgan Ibrahim reports a collision loss on 2026-05-05 in Seattle. Notes from the first call said the loss was 2026-05-03 and that there was no third party; the FNOL form lists third_party_involved=False. One note says airbags did not deploy; another says they did. Need a recorded statement before we lean on the photos.",
+  "claim_id": "17bd2771-1229-524a-bfa7-b8d00010fb3d",
+  "claimant": {
+    "date_of_birth": "1984-08-27",
+    "email": "morgan.ibrahim.52@example.test",
+    "full_name": "Morgan Ibrahim",
+    "phone": "746-555-4918"
+  },
+  "claimed_amount": {
+    "amount": "3655.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "ground_truth": {
+    "coverage_status": "covered",
+    "expected_routing": "human_review",
+    "fraud_label": "legitimate",
+    "is_fraud": false,
+    "rationale": "Coverage label covered follows specimen wording for peril 'collision'. No injected fraud signals.",
+    "severity_band": "moderate",
+    "severity_score": 0.48
+  },
+  "image_captions": [
+    "collision photo 1 \u2014 Seattle",
+    "collision photo 2 \u2014 Seattle"
+  ],
+  "images": [
+    {
+      "caption": "collision photo 1 \u2014 Seattle",
+      "exif_datetime": "2026-05-05T11:00:00",
+      "filename": "collision-1.jpg",
+      "relative_path": "images/collision-1.jpg"
+    },
+    {
+      "caption": "collision photo 2 \u2014 Seattle",
+      "exif_datetime": "2026-05-05T11:00:00",
+      "filename": "collision-2.jpg",
+      "relative_path": "images/collision-2.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Low-to-moderate speed impact in Seattle. No other vehicle is named. Visible bumper and lamp damage.",
+    "incident_date": "2026-05-05",
+    "incident_type": "auto_collision",
+    "location": {
+      "city": "Seattle",
+      "postal_code": "98101",
+      "state": "WA",
+      "street_address": "3278 Oak Ct"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-05-06",
+    "third_party_involved": false,
+    "vehicle": {
+      "license_plate": "8TJY866",
+      "make": "Ford",
+      "model": "Escape",
+      "odometer": 114734,
+      "prior_odometer": null,
+      "prior_odometer_date": null,
+      "vin": "EVG9CYJ1KLML5C30S",
+      "year": 2020
+    }
+  },
+  "injected_fraud_signals": [],
+  "line_of_business": "auto",
+  "notes_style": "contradictory",
+  "peril": "collision",
+  "policy_form": "PAP-CG-01",
+  "policy_number": "PA-2026-000052",
+  "recipe_key": "auto_collision",
+  "split": "eval"
+}

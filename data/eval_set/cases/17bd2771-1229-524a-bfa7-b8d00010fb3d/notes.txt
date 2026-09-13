@@ -1,0 +1,1 @@
+Insured Morgan Ibrahim reports a collision loss on 2026-05-05 in Seattle. Notes from the first call said the loss was 2026-05-03 and that there was no third party; the FNOL form lists third_party_involved=False. One note says airbags did not deploy; another says they did. Need a recorded statement before we lean on the photos.

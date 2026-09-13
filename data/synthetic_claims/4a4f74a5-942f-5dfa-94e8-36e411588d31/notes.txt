@@ -1,0 +1,1 @@
+Insured Harper Nguyen reports a vandalism loss on 2026-06-19 in Phoenix. Notes from the first call said the loss was 2026-06-17 and that there was no third party; the FNOL form lists third_party_involved=False. One note says airbags did not deploy; another says they did. Need a recorded statement before we lean on the photos.

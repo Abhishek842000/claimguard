@@ -1,0 +1,62 @@
+{
+  "adjuster_notes": "First notice received for Drew Hale. Loss date 2026-03-05, sudden_pipe in Denver, CO. Supply line under the sink burst while the insured was home in Denver. Water stopped within an hour. No third party is named. Claimed amount $3833.00. Photos appear consistent with the stated peril pending a closer desk review.",
+  "claim_id": "97afd234-5c27-5d89-9de6-5a2c2577584d",
+  "claimant": {
+    "date_of_birth": "1972-10-07",
+    "email": "drew.hale.22@example.test",
+    "full_name": "Drew Hale",
+    "phone": "329-555-8758"
+  },
+  "claimed_amount": {
+    "amount": "3833.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "image_captions": [
+    "sudden_pipe photo 1 \u2014 Denver",
+    "sudden_pipe photo 2 \u2014 Denver"
+  ],
+  "images": [
+    {
+      "caption": "sudden_pipe photo 1 \u2014 Denver",
+      "exif_datetime": "2026-03-05T11:00:00",
+      "filename": "sudden_pipe-1.jpg",
+      "relative_path": "images/sudden_pipe-1.jpg"
+    },
+    {
+      "caption": "sudden_pipe photo 2 \u2014 Denver",
+      "exif_datetime": "2026-03-05T11:00:00",
+      "filename": "sudden_pipe-2.jpg",
+      "relative_path": "images/sudden_pipe-2.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Supply line under the sink burst while the insured was home in Denver. Water stopped within an hour.",
+    "incident_date": "2026-03-05",
+    "incident_type": "property_water",
+    "location": {
+      "city": "Denver",
+      "postal_code": "80203",
+      "state": "CO",
+      "street_address": "7719 Summit Blvd"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-03-06",
+    "third_party_involved": false,
+    "vehicle": null
+  },
+  "injected_fraud_signals": [],
+  "line_of_business": "home",
+  "notes_style": "clean",
+  "peril": "sudden_pipe",
+  "policy_form": "HO3-CG-01",
+  "policy_number": "HO-2026-000022",
+  "recipe_key": "home_pipe",
+  "split": "dev"
+}

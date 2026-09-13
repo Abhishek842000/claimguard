@@ -1,0 +1,71 @@
+{
+  "adjuster_notes": "Insured Reese Kowalski reports a fire loss on 2026-07-16 in Miami. Notes from the first call said the loss was 2026-07-14 and that there was no third party; the FNOL form lists third_party_involved=False. One note says airbags did not deploy; another says they did. Need a recorded statement before we lean on the photos.",
+  "claim_id": "7a48d422-c4e4-5ed0-95cc-05feaa73eef8",
+  "claimant": {
+    "date_of_birth": "1981-01-21",
+    "email": "reese.kowalski.53@example.test",
+    "full_name": "Reese Kowalski",
+    "phone": "404-555-3267"
+  },
+  "claimed_amount": {
+    "amount": "37026.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "ground_truth": {
+    "coverage_status": "covered",
+    "expected_routing": "human_review",
+    "fraud_label": "legitimate",
+    "is_fraud": false,
+    "rationale": "Coverage label covered follows specimen wording for peril 'fire'. No injected fraud signals.",
+    "severity_band": "high",
+    "severity_score": 0.74
+  },
+  "image_captions": [
+    "fire photo 1 \u2014 Miami",
+    "fire photo 2 \u2014 Miami"
+  ],
+  "images": [
+    {
+      "caption": "fire photo 1 \u2014 Miami",
+      "exif_datetime": "2026-07-16T14:00:00",
+      "filename": "fire-1.jpg",
+      "relative_path": "images/fire-1.jpg"
+    },
+    {
+      "caption": "fire photo 2 \u2014 Miami",
+      "exif_datetime": "2026-07-16T14:00:00",
+      "filename": "fire-2.jpg",
+      "relative_path": "images/fire-2.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Kitchen fire on the residence premises in Miami. Fire department extinguished. Smoke throughout first floor.",
+    "incident_date": "2026-07-16",
+    "incident_type": "property_fire",
+    "location": {
+      "city": "Miami",
+      "postal_code": "33130",
+      "state": "FL",
+      "street_address": "7973 Oak Ct"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-07-17",
+    "third_party_involved": false,
+    "vehicle": null
+  },
+  "injected_fraud_signals": [],
+  "line_of_business": "home",
+  "notes_style": "contradictory",
+  "peril": "fire",
+  "policy_form": "HO3-CG-01",
+  "policy_number": "HO-2026-000053",
+  "recipe_key": "home_fire",
+  "split": "eval"
+}

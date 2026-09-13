@@ -1,0 +1,72 @@
+{
+  "adjuster_notes": "First notice received for Parker Vargas. Loss date 2026-03-04, fire in Denver, CO. Kitchen fire on the residence premises in Denver. Fire department extinguished. Smoke throughout first floor. No third party is named. Claimed amount $21144.00. Photos appear consistent with the stated peril pending a closer desk review.",
+  "claim_id": "90954b96-8fc4-5bc8-97d3-494c1bae3bec",
+  "claimant": {
+    "date_of_birth": "1992-01-01",
+    "email": "parker.vargas.0@example.test",
+    "full_name": "Parker Vargas",
+    "phone": "958-555-2424"
+  },
+  "claimed_amount": {
+    "amount": "21144.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "exif_offset_days": 27,
+  "image_captions": [
+    "fire photo 1 \u2014 Denver",
+    "fire photo 2 \u2014 Denver",
+    "fire photo 3 \u2014 Denver"
+  ],
+  "images": [
+    {
+      "caption": "fire photo 1 \u2014 Denver",
+      "exif_datetime": "2026-03-31T13:00:00",
+      "filename": "fire-1.jpg",
+      "relative_path": "images/fire-1.jpg"
+    },
+    {
+      "caption": "fire photo 2 \u2014 Denver",
+      "exif_datetime": "2026-03-31T13:00:00",
+      "filename": "fire-2.jpg",
+      "relative_path": "images/fire-2.jpg"
+    },
+    {
+      "caption": "fire photo 3 \u2014 Denver",
+      "exif_datetime": "2026-03-31T13:00:00",
+      "filename": "fire-3.jpg",
+      "relative_path": "images/fire-3.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Kitchen fire on the residence premises in Denver. Fire department extinguished. Smoke throughout first floor.",
+    "incident_date": "2026-03-04",
+    "incident_type": "property_fire",
+    "location": {
+      "city": "Denver",
+      "postal_code": "80203",
+      "state": "CO",
+      "street_address": "1635 Highland Dr"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-03-05",
+    "third_party_involved": false,
+    "vehicle": null
+  },
+  "injected_fraud_signals": [
+    "photo_exif_mismatch"
+  ],
+  "line_of_business": "home",
+  "notes_style": "clean",
+  "peril": "fire",
+  "policy_form": "HO3-CG-01",
+  "policy_number": "HO-2026-000000",
+  "recipe_key": "home_fire",
+  "split": "dev"
+}

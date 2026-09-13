@@ -1,0 +1,71 @@
+{
+  "adjuster_notes": "First notice received for Cameron Hale. Loss date 2026-04-28, theft in Denver, CO. Covered auto missing from street parking in Denver. Keys accounted for. Police notified. No third party is named. Claimed amount $13129.00. Photos appear consistent with the stated peril pending a closer desk review.",
+  "claim_id": "ddfb080b-f5cd-546e-82f0-b66070f9cb90",
+  "claimant": {
+    "date_of_birth": "1998-09-07",
+    "email": "cameron.hale.47@example.test",
+    "full_name": "Cameron Hale",
+    "phone": "722-555-2868"
+  },
+  "claimed_amount": {
+    "amount": "13129.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "image_captions": [
+    "theft photo 1 \u2014 Denver",
+    "theft photo 2 \u2014 Denver"
+  ],
+  "images": [
+    {
+      "caption": "theft photo 1 \u2014 Denver",
+      "exif_datetime": "2026-04-28T12:00:00",
+      "filename": "theft-1.jpg",
+      "relative_path": "images/theft-1.jpg"
+    },
+    {
+      "caption": "theft photo 2 \u2014 Denver",
+      "exif_datetime": "2026-04-28T12:00:00",
+      "filename": "theft-2.jpg",
+      "relative_path": "images/theft-2.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Covered auto missing from street parking in Denver. Keys accounted for. Police notified.",
+    "incident_date": "2026-04-28",
+    "incident_type": "auto_theft",
+    "location": {
+      "city": "Denver",
+      "postal_code": "80203",
+      "state": "CO",
+      "street_address": "5824 Oak Ct"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-04-28",
+    "third_party_involved": false,
+    "vehicle": {
+      "license_plate": "7JXK326",
+      "make": "Nissan",
+      "model": "Altima",
+      "odometer": 55655,
+      "prior_odometer": null,
+      "prior_odometer_date": null,
+      "vin": "23VH2BXL60F4GS42F",
+      "year": 2016
+    }
+  },
+  "injected_fraud_signals": [],
+  "line_of_business": "auto",
+  "notes_style": "clean",
+  "peril": "theft",
+  "policy_form": "PAP-CG-01",
+  "policy_number": "PA-2026-000047",
+  "recipe_key": "auto_theft",
+  "split": "dev"
+}

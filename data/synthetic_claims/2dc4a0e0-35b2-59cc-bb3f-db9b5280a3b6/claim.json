@@ -1,0 +1,62 @@
+{
+  "adjuster_notes": "First notice received for Riley Diaz. Loss date 2026-08-22, theft in Nashville, TN. Forced rear-door entry in Nashville. Electronics and jewelry missing. No third party is named. Claimed amount $1625.00. Photos appear consistent with the stated peril pending a closer desk review.",
+  "claim_id": "2dc4a0e0-35b2-59cc-bb3f-db9b5280a3b6",
+  "claimant": {
+    "date_of_birth": "1969-08-26",
+    "email": "riley.diaz.34@example.test",
+    "full_name": "Riley Diaz",
+    "phone": "870-555-3529"
+  },
+  "claimed_amount": {
+    "amount": "1625.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "image_captions": [
+    "theft photo 1 \u2014 Nashville",
+    "theft photo 2 \u2014 Nashville"
+  ],
+  "images": [
+    {
+      "caption": "theft photo 1 \u2014 Nashville",
+      "exif_datetime": "2026-08-22T10:00:00",
+      "filename": "theft-1.jpg",
+      "relative_path": "images/theft-1.jpg"
+    },
+    {
+      "caption": "theft photo 2 \u2014 Nashville",
+      "exif_datetime": "2026-08-22T10:00:00",
+      "filename": "theft-2.jpg",
+      "relative_path": "images/theft-2.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Forced rear-door entry in Nashville. Electronics and jewelry missing.",
+    "incident_date": "2026-08-22",
+    "incident_type": "property_theft",
+    "location": {
+      "city": "Nashville",
+      "postal_code": "37203",
+      "state": "TN",
+      "street_address": "4442 Oak Ct"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-08-24",
+    "third_party_involved": false,
+    "vehicle": null
+  },
+  "injected_fraud_signals": [],
+  "line_of_business": "home",
+  "notes_style": "clean",
+  "peril": "theft",
+  "policy_form": "HO3-CG-01",
+  "policy_number": "HO-2026-000034",
+  "recipe_key": "home_theft",
+  "split": "dev"
+}

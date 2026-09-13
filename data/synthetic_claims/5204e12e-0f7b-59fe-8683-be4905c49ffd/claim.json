@@ -1,0 +1,62 @@
+{
+  "adjuster_notes": "FNOL mob. insd Logan. wind @ Seattle 11/8. amt asked 7151.00. no 3p. photos 2 recvd. f/u est.",
+  "claim_id": "5204e12e-0f7b-59fe-8683-be4905c49ffd",
+  "claimant": {
+    "date_of_birth": "1965-08-20",
+    "email": "logan.cho.11@example.test",
+    "full_name": "Logan Cho",
+    "phone": "523-555-2188"
+  },
+  "claimed_amount": {
+    "amount": "7151.00",
+    "currency": "USD"
+  },
+  "documents": [
+    {
+      "document_type": "claim_form",
+      "filename": "fnol-claim-form.pdf",
+      "relative_path": "documents/fnol-claim-form.pdf"
+    }
+  ],
+  "image_captions": [
+    "wind photo 1 \u2014 Seattle",
+    "wind photo 2 \u2014 Seattle"
+  ],
+  "images": [
+    {
+      "caption": "wind photo 1 \u2014 Seattle",
+      "exif_datetime": "2026-11-08T10:00:00",
+      "filename": "wind-1.jpg",
+      "relative_path": "images/wind-1.jpg"
+    },
+    {
+      "caption": "wind photo 2 \u2014 Seattle",
+      "exif_datetime": "2026-11-08T10:00:00",
+      "filename": "wind-2.jpg",
+      "relative_path": "images/wind-2.jpg"
+    }
+  ],
+  "incident": {
+    "description": "Wind-thrown limb punctured the rear roof plane in Seattle.",
+    "incident_date": "2026-11-08",
+    "incident_type": "property_weather",
+    "location": {
+      "city": "Seattle",
+      "postal_code": "98101",
+      "state": "WA",
+      "street_address": "1738 Pine Ave"
+    },
+    "police_report_number": null,
+    "reported_date": "2026-11-08",
+    "third_party_involved": false,
+    "vehicle": null
+  },
+  "injected_fraud_signals": [],
+  "line_of_business": "home",
+  "notes_style": "messy",
+  "peril": "wind",
+  "policy_form": "HO3-CG-01",
+  "policy_number": "HO-2026-000011",
+  "recipe_key": "home_wind",
+  "split": "dev"
+}
