@@ -68,6 +68,24 @@ class ImageRef(ClaimGuardModel):
     )
 
 
+class IntakeAgentInput(ClaimGuardModel):
+    """What the intake node is allowed to read. Built from `ClaimState` or a claim folder."""
+
+    claim_id: str = Field(description="Claim being parsed.")
+    raw_documents: list[DocumentRef] = Field(
+        default_factory=list,
+        description="PDFs and notes the parser will open. Storage URIs, not bytes.",
+    )
+    raw_images: list[ImageRef] = Field(
+        default_factory=list,
+        description="Photo pointers copied onto ClaimIntake.images; not classified here.",
+    )
+    notes_text: str | None = Field(
+        default=None,
+        description="Adjuster notes if already loaded (otherwise a notes.txt document is parsed).",
+    )
+
+
 class AgentStep(ClaimGuardModel):
     """One graph-node visit appended to `ClaimState.trace`.
 
