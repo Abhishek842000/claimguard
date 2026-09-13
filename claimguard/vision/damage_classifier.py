@@ -18,18 +18,36 @@ class DamageClassifier:
     name = "base"
     version = "0"
 
-    def classify(self, image_path: Path, *, image_id: UUID, caption: str | None) -> PhotoFinding:
+    def classify(
+        self,
+        image_path: Path,
+        *,
+        image_id: UUID,
+        caption: str | None,
+        context: str = "",
+    ) -> PhotoFinding:
         raise NotImplementedError
 
 
 class HeuristicDamageClassifier(DamageClassifier):
-    """Keyword heuristic over caption + filename. Deterministic, no weights."""
+    """Keyword heuristic over filename, caption, and claim text. No vision weights.
+
+    Uploaded demo photos are often `IMG_1234.jpg` / `demo_img.webp`. Intake
+    notes still say "hail dented the hood", so we read that context too.
+    """
 
     name = "heuristic-filename-v1"
-    version = "1.0.0"
+    version = "1.1.0"
 
-    def classify(self, image_path: Path, *, image_id: UUID, caption: str | None) -> PhotoFinding:
-        blob = f"{image_path.name} {caption or ''}".lower()
+    def classify(
+        self,
+        image_path: Path,
+        *,
+        image_id: UUID,
+        caption: str | None,
+        context: str = "",
+    ) -> PhotoFinding:
+        blob = f"{image_path.name} {caption or ''} {context}".lower()
         types: list[DamageType] = []
         severity = SeverityLevel.LOW
         if any(word in blob for word in ("hail", "dent")):
@@ -58,7 +76,10 @@ class HeuristicDamageClassifier(DamageClassifier):
             image_id=image_id,
             damage_types=types,
             severity=severity,
-            consistency_notes="Heuristic labels from filename/caption; not a trained vision model.",
+            consistency_notes=(
+                "Heuristic labels from filename, caption, and claim text; "
+                "not a trained vision model."
+            ),
             confidence=0.62 if types != [DamageType.UNKNOWN] else 0.40,
         )
 
