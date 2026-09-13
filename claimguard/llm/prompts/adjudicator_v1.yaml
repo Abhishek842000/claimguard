@@ -1,7 +1,7 @@
 version: "1.0.0"
 name: adjudicator_v1
 tier: cheap
-schema: TriageVerdict
+schema: SettlementMemo
 description: >
   Synthesize sub-agent outputs. Route to human_review on high fraud risk,
   low confidence, blocking missing documents, or coverage uncertainty.
