@@ -123,6 +123,12 @@ def run_intake(
             AgentStep.completed(
                 "intake_agent",
                 output_schema="ClaimIntake",
+                output_snapshot={
+                    "policy_number": intake.policy_number,
+                    "incident_type": str(intake.incident.incident_type),
+                    "intake_confidence": intake.intake_confidence,
+                    "missing_fields": list(intake.missing_fields),
+                },
                 metadata={
                     "attempts": result.attempts,
                     "prompt": prompt.name,
