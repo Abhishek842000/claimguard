@@ -365,3 +365,30 @@ Do not claim recall improved.
 - Mileage rule + tighter VIN graph (would target the 2 FN)
 - Human-review → eval-set feedback loop
 
+---
+
+## Demo upload hardening (2026-09-13)
+
+**Goal:** film a walkthrough with camera photos without the picker, rate
+limit, or filename heuristic fighting the demo.
+
+### Done
+
+- File picker **appends** across opens; selected files are listed with Remove
+- `docs/demo/README.md` filming recipe (stock/own photos, Phoenix FNOL, notes)
+- Rate limit applies to **writes only** so list/metrics polls cannot 429 upload
+- Vision reads intake notes + loss description, so `demo_img.webp` still
+  labels dent when the text says hail
+- `FR-NOTE-LOCATION-MISMATCH` when notes name a different known city than
+  the FNOL form (Phoenix notes + Denver form)
+
+### Tested
+
+- `uv run pytest tests/unit/test_auth.py tests/unit/test_vision_agent.py tests/unit/test_fraud_agent.py`
+- Live: leftover dashboard polls no longer 429 `POST /v1/claims/upload`
+
+### Deferred
+
+- Pixel-level hail classifier (still a text/filename heuristic)
+- Checked-in `docs/demo/claimguard-demo.mp4`
+
