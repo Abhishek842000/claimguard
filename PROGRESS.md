@@ -167,5 +167,67 @@ this loop is green.
 
 ### Next
 
-- Vision agent (do not start until intake verification is accepted)
+- Vision / fraud / policy / adjudicator (wired in the following section)
+
+---
+
+## Phase 4 — Graph wiring, worker, API, Langfuse (2026-09-12)
+
+**Goal:** a synthetic claim can be POSTed, processed asynchronously, and
+retrieved with a full verdict + trace that also lands in Langfuse.
+
+### Done
+
+- All five agents run in the compiled StateGraph:
+  `intake → parallel(vision, fraud, policy) → adjudicator → route`
+- `AgentStep` now carries redacted input/output snapshots, latency, tokens,
+  cost, prompt version, and model
+- Graph-level guard: any throw or exhausted structured-output retry sets
+  `error` + `requires_human_review` and the claim still finishes
+- Vision: `DamageClassifier` protocol; default is filename/caption heuristic
+  (swap in a fine-tuned HF model later without touching the node)
+- Fraud: hybrid RAG (BM25 + dense + RRF) + NOAA/police/VIN rules + LLM
+  synthesis (`fraud_v1`)
+- Policy: hybrid RAG + `filter_grounded_clauses` so hallucinated clause IDs
+  are dropped programmatically (`policy_v1`)
+- Adjudicator: `adjudicator_v1` drafts `SettlementMemo`; routing scores stay
+  as tunable constants in `RoutingThresholds`
+- Langfuse: real HTTP ingest to `/api/public/ingestion` (per-agent span +
+  generation with tokens/cost). Failure is logged, not fatal
+- `POST /v1/claims` `{source_dir}` → 202 + Celery `process_claim`
+- Worker loads artifacts, `invoke_claim_pipeline`, writes verdict + traces
+- `GET /v1/claims/{id}` returns status, verdict, redacted trace
+
+### Choices + tradeoffs
+
+- Reranker is identity/RRF, not a cross-encoder — keeps the worker image
+  small; `Reranker` protocol is the swap-in
+- Vision default is heuristic, not a downloaded HF checkpoint — same reason
+- Offline heuristic completers so the pipeline runs without `OPENAI_API_KEY`
+- Queue remains Celery+Redis (already in the stack)
+
+### Tested
+
+- `uv run pytest` — 58 passed (mocked LLM retry, citation grounding,
+  exception → human review, full sample-claim graph, API enqueue)
+
+### How to demo
+
+```bash
+# Stop the stale Compose api/worker so local code owns :8000 and the queue
+docker compose stop api worker
+uv run uvicorn apps.api.main:app --host 127.0.0.1 --port 8000
+uv run celery -A apps.worker.celery_app:celery_app worker -Q claims -l info
+curl -sS -X POST http://127.0.0.1:8000/v1/claims \
+  -H 'content-type: application/json' \
+  -d '{"source_dir":"data/synthetic_claims/09d919dc-2168-544f-8ec0-4a0f018c8ef6"}'
+# poll GET /v1/claims/{id} then open Langfuse at http://localhost:3000
+```
+
+### Deferred
+
+- HF vision + cross-encoder rerank
+- Frontend submit / trace viewer (API is enough to demo)
+- Docker image rebuild so Compose api/worker pick up this code
+  (`./data` is now mounted)
 

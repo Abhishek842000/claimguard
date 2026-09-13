@@ -12,4 +12,4 @@ from fastapi.testclient import TestClient
 def test_claims_routes_are_registered() -> None:
     client = TestClient(create_app(Settings(app_env="test")))
     response = client.post("/v1/claims")
-    assert response.status_code == 501
+    assert response.status_code == 422
