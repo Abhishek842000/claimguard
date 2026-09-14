@@ -119,10 +119,9 @@ app proxies through `/api/claimguard/*` so the key is not in client JS.
 4. Open the claim: verdict + a step-by-step agent timeline (not a JSON dump)
 5. Cost panel on the home page shows running total, avg/claim, and by-agent spend
 
-**Walkthrough video:** [docs/demo/README.md](docs/demo/README.md) — record a
-~90s QuickTime capture to [`docs/demo/claimguard-demo.mp4`](docs/demo/claimguard-demo.mp4)
-when you publish. Until that file is checked in, the five steps above are the
-demo. There is no staged GIF with fake numbers.
+**Walkthrough video:** [`docs/demo/claimguard-demo.mp4`](docs/demo/claimguard-demo.mp4)
+(~29s, 1280×720). It submits sample `PA-2026-000039 · hail`, then scrolls the
+verdict and agent timeline. The live path below is the same flow.
 
 | Service             | URL                            | Notes                                      |
 |---------------------|--------------------------------|--------------------------------------------|
@@ -210,8 +209,7 @@ cost story: spend frontier tokens only on the write-up a human will read.
   real HF vision checkpoint instead of the filename heuristic.
 - Stronger entity graph (same phone + different named insured, VIN parse
   robustness) and a mileage-vs-prior-odometer rule.
-- JWT / per-adjuster keys, Compose service for the Next.js app, and a checked-in
-  `docs/demo/claimguard-demo.mp4`.
+- JWT / per-adjuster keys and a Compose service for the Next.js app.
 
 ## Why this project
 

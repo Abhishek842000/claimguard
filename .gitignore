@@ -48,3 +48,6 @@ data/uploads/*
 
 # Docker
 *.log
+
+# Playwright capture scratch (the published mp4 is kept)
+docs/demo/raw/

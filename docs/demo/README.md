@@ -1,9 +1,11 @@
 # Demo capture
 
-The live walkthrough is http://localhost:3001 (see the root README). There is
-no hosted GIF yet — do not invent a YouTube link. The five-step path in the
-README is the source of truth until a file exists at
-`docs/demo/claimguard-demo.mp4`.
+The walkthrough file is [`claimguard-demo.mp4`](claimguard-demo.mp4) (1280×720,
+~29s). It submits sample `PA-2026-000039 · hail` and scrolls the verdict plus
+agent timeline (intake → fraud weather-mismatch → policy → vision dent →
+adjudicator → human review).
+
+The live path is still http://localhost:3001 (see the root README).
 
 Sample-folder JPEGs (`hail-1.jpg`, etc.) are **labeled diagrams**, not camera
 photos. CarDD and similar research sets are not redistributable here. For a
