@@ -361,7 +361,6 @@ Do not claim recall improved.
 ### Deferred
 
 - Actual Fly/Railway machines (needs the user's Fly org + secrets)
-- Checked-in `docs/demo/claimguard-demo.mp4`
 - Mileage rule + tighter VIN graph (would target the 2 FN)
 - Human-review → eval-set feedback loop
 
@@ -390,5 +389,6 @@ limit, or filename heuristic fighting the demo.
 ### Deferred
 
 - Pixel-level hail classifier (still a text/filename heuristic)
-- Checked-in `docs/demo/claimguard-demo.mp4`
+
+The sample-claim walkthrough is recorded at `docs/demo/claimguard-demo.mp4`.
 
